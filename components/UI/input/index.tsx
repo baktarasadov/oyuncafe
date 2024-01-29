@@ -20,7 +20,7 @@ const Input: React.FC<IInput> = ({
           onBlur={onBlur}
           value={value}
           type={type}
-          className={`outline-none ${className}`}
+          className={`${className}`}
         />
       </div>
     </>
