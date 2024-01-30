@@ -34,41 +34,46 @@ const Login = () => {
 
   return (
     <>
-      <div className={`${styles.mainForm} ${nunitoFont.className}`}>
-        <h2 className={styles.title}>Üye Girişi</h2>
-        <Link href={"/"} className={styles.close}>
-          <IoClose />
-        </Link>
-        <form onSubmit={formik.handleSubmit}>
-          <div className={styles.loginForm}>
-            {loginInputs.map((element) => (
-              <div key={element.name} className={styles.inputGroup}>
-                <Input
-                  value={formik.values[element.name as keyof IFormLogin]}
-                  onChange={(e) => {
-                    formik.handleChange(e);
-                    setShowError(false);
-                  }}
-                  placeholder={element.placeholder}
-                  type={element.type}
-                  id={element.name}
-                />
-                {sohowError && (
-                  <p className={styles.error}>
-                    {formik.errors[element.name as keyof IFormLogin]}
-                  </p>
-                )}
-              </div>
-            ))}
-          </div>
-          <Button
-            className={styles.btnRegister}
-            type="submit"
-            onClick={handleButtonClick}
-          >
-            Hesabımı Oluştur
+      <div>
+        <div className={`${styles.mainForm} ${nunitoFont.className}`}>
+          <h2 className={styles.title}>Üye Girişi</h2>
+          <Link href={"/"} className={styles.close}>
+            <IoClose />
+          </Link>
+          <form onSubmit={formik.handleSubmit}>
+            <div className={styles.loginForm}>
+              {loginInputs.map((element) => (
+                <div key={element.name} className={styles.inputGroup}>
+                  <Input
+                    value={formik.values[element.name as keyof IFormLogin]}
+                    onChange={(e) => {
+                      formik.handleChange(e);
+                      setShowError(false);
+                    }}
+                    placeholder={element.placeholder}
+                    type={element.type}
+                    id={element.name}
+                  />
+                  {sohowError && (
+                    <p className={styles.error}>
+                      {formik.errors[element.name as keyof IFormLogin]}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
+            <div className={styles.btnContainer}>
+              <Button className={styles.closeBtn}>KAPAT</Button>
+              <Button className={styles.nextBtn}>GİRİŞ</Button>
+            </div>
+          </form>
+        </div>
+        <div className={styles.end}>
+          <Button className={styles.memberBtn}>Üye Ol</Button>
+          <Button className={styles.forgotBtn} type="submit">
+            Şifremi Unuttum
           </Button>
-        </form>
+        </div>
       </div>
     </>
   );

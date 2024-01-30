@@ -33,7 +33,7 @@
 .loginForm {
   display: flex;
   column-gap: 25px;
-  margin: 38px 28px 58px 28px;
+  margin: 38px 28px 68px 28px;
 }
 .registerForm .inputGroup {
   display: flex;
@@ -64,6 +64,7 @@
   height: 26px;
   flex-shrink: 0;
   color: #fff;
+  padding: 2px 8px;
 }
 
 .error {
@@ -126,8 +127,8 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  width: 164px;
-  height: 30px;
+  padding: 9px 42px;
+
   flex-shrink: 0;
   border: 0;
   margin: 16px 0;
@@ -136,4 +137,63 @@
 .btnRegister:hover {
   transform: scale(0.99);
   transition: transform 0.3s ease-in-out;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  column-gap: 8px;
+  position: absolute;
+  bottom: -12px;
+  right: 0;
+  left: 0;
+}
+
+.closeBtn,
+.nextBtn {
+  color: #fff;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  flex-shrink: 0;
+  border-radius: 20px;
+  padding: 4px 17px;
+  border: 1px solid #000;
+  background: linear-gradient(180deg, #4bc11d 0%, #098008 100%);
+}
+.closeBtn {
+  background: linear-gradient(180deg, #d1b63b 0%, #846401 100%);
+}
+
+.end {
+  margin-top: 37px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.memberBtn {
+  border-radius: 10px;
+  background: #fbd952;
+  color: #000;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 6px 30px;
+  border: 0;
+}
+
+.forgotBtn {
+  color: #fff;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 10px;
+  background: #30464e;
+  padding: 8px 10px;
+  margin-top: 10px;
+  border: 0;
 }
