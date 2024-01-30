@@ -50,35 +50,37 @@ const Register = () => {
                 <label htmlFor={element.name}>
                   {element.name[0].toUpperCase() + element.name.slice(1)}
                 </label>
-                <Input
-                  value={formik.values[element.name as keyof IFormRegister]}
-                  placeholder={element.placeholder}
-                  onChange={(e) => {
-                    formik.handleChange(e);
-                    setShowError(false);
-                  }}
-                  type={
-                    element.type === "password"
-                      ? showPassword
-                        ? "text"
-                        : "password"
-                      : element.type
-                  }
-                  id={element.name}
-                />
-                {element.type === "password" && (
-                  <span
-                    className={styles.password}
-                    onClick={() => setShowPassword(!showPassword)}
-                  >
-                    {showPassword ? <VscEye /> : <VscEyeClosed />}
-                  </span>
-                )}
-                {sohowError && (
-                  <p className={styles.error}>
-                    {formik.errors[element.name as keyof IFormRegister]}
-                  </p>
-                )}
+                <div className={styles.input}>
+                  <Input
+                    value={formik.values[element.name as keyof IFormRegister]}
+                    placeholder={element.placeholder}
+                    onChange={(e) => {
+                      formik.handleChange(e);
+                      setShowError(false);
+                    }}
+                    type={
+                      element.type === "password"
+                        ? showPassword
+                          ? "text"
+                          : "password"
+                        : element.type
+                    }
+                    id={element.name}
+                  />
+                  {element.type === "password" && (
+                    <span
+                      className={styles.password}
+                      onClick={() => setShowPassword(!showPassword)}
+                    >
+                      {showPassword ? <VscEye /> : <VscEyeClosed />}
+                    </span>
+                  )}
+                  {sohowError && (
+                    <p className={styles.error}>
+                      {formik.errors[element.name as keyof IFormRegister]}
+                    </p>
+                  )}
+                </div>
               </div>
             ))}
             <div className={styles.radioGroup}>

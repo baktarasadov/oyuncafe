@@ -3,7 +3,7 @@ import IAuthInputList from "@/types/auth/IAuth";
 export const registerInputs: IAuthInputList[] = [
     {
         name: "fullname",
-        placeholder: "Full name",
+        placeholder: "Fullname",
         type: "text",
     },
     {

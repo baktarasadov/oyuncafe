@@ -36,14 +36,15 @@ const Login = () => {
     <>
       <div>
         <div className={`${styles.mainForm} ${nunitoFont.className}`}>
-          <h2 className={styles.title}>Üye Girişi</h2>
-          <Link href={"/"} className={styles.close}>
-            <IoClose />
-          </Link>
+          <h2 className={styles.title}>Login</h2>
+
           <form onSubmit={formik.handleSubmit}>
             <div className={styles.loginForm}>
               {loginInputs.map((element) => (
                 <div key={element.name} className={styles.inputGroup}>
+                  <label htmlFor={element.name}>
+                    {element.name[0].toUpperCase() + element.name.slice(1)}
+                  </label>
                   <Input
                     value={formik.values[element.name as keyof IFormLogin]}
                     onChange={(e) => {
@@ -63,15 +64,21 @@ const Login = () => {
               ))}
             </div>
             <div className={styles.btnContainer}>
-              <Button className={styles.closeBtn}>KAPAT</Button>
-              <Button className={styles.nextBtn}>GİRİŞ</Button>
+              <Link href={"/"} className={styles.closeBtn}>
+                Close
+              </Link>
+              <Button className={styles.nextBtn} onClick={handleButtonClick}>
+                Login
+              </Button>
             </div>
           </form>
         </div>
         <div className={styles.end}>
-          <Button className={styles.memberBtn}>Üye Ol</Button>
+          <Link href={"/auth/register"} className={styles.memberBtn}>
+            Create a new account
+          </Link>
           <Button className={styles.forgotBtn} type="submit">
-            Şifremi Unuttum
+            Forgot your password?
           </Button>
         </div>
       </div>
