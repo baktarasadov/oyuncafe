@@ -1,12 +1,17 @@
 export default interface IAuthInputList {
     name: string;
-    labelName: string
+    labelName?: string
     type: string;
-    // placeholder: string;
+    placeholder?: string;
 }
 
 export interface IFormRegister {
     fullname: string;
     email: string;
+    password: string;
+}
+
+export interface IFormLogin {
+    fullname: string;
     password: string;
 }

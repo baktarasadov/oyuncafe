@@ -9,6 +9,7 @@ import styles from "../assets/style/styles.module.css";
 import { nunitoFont } from "@/utils/font";
 import { IoClose } from "react-icons/io5";
 import Button from "@/components/UI/button";
+import Link from "next/link";
 const Register = () => {
   const [selectedOption, setSelectedOption] = useState<string>("Kadın");
   const [sohowError, setShowError] = useState<boolean>(false);
@@ -37,10 +38,10 @@ const Register = () => {
     <>
       <div className={`${styles.mainForm} ${nunitoFont.className}`}>
         <h2 className={styles.title}>Hesabını Oluştur!</h2>
-        <span className={styles.close}>
+        <Link href={"/"} className={styles.close}>
           <IoClose />
-        </span>
-        <form onSubmit={formik.handleSubmit} className={styles.form}>
+        </Link>
+        <form onSubmit={formik.handleSubmit} className={styles.registerForm}>
           {registerInputs.map((element) => (
             <div key={element.name} className={styles.inputGroup}>
               <label htmlFor={element.name}>{element.labelName}</label>
