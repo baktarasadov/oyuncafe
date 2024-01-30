@@ -1,10 +1,12 @@
-import RegisterContainer from "@/container/auth/login";
+import RegisterContainer from "@/container/auth/register";
 import React from "react";
 
 const RegisterPage = () => {
   return (
     <>
-      <RegisterContainer />
+      <div>
+        <RegisterContainer />
+      </div>
     </>
   );
 };

@@ -1,5 +1,6 @@
 export default interface IAuthInputList {
     name: string;
+    labelName: string
     type: string;
     // placeholder: string;
 }

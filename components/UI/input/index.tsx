@@ -7,22 +7,24 @@ const Input: React.FC<IInput> = ({
   className,
   placeholder,
   value,
+  checked,
+  name,
   onChange,
   onBlur,
 }) => {
   return (
     <>
-      <div>
-        <input
-          id={id}
-          placeholder={placeholder}
-          onChange={onChange}
-          onBlur={onBlur}
-          value={value}
-          type={type}
-          className={`${className}`}
-        />
-      </div>
+      <input
+        id={id}
+        placeholder={placeholder}
+        onChange={onChange}
+        onBlur={onBlur}
+        value={value}
+        name={name}
+        type={type}
+        className={`${className}`}
+        checked={checked}
+      />
     </>
   );
 };
