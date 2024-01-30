@@ -3,18 +3,18 @@ import IAuthInputList from "@/types/auth/IAuth";
 export const registerInputs: IAuthInputList[] = [
     {
         name: "fullname",
-        labelName: "Kullanıcı Adı",
+        placeholder: "Full name",
         type: "text",
     },
     {
 
         name: "email",
-        labelName: "E-Posta",
+        placeholder: "Email address",
         type: "email",
     },
     {
         name: "password",
-        labelName: "Şifre",
+        placeholder: "Password",
         type: "password",
     },
 
