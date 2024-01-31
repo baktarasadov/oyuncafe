@@ -1,0 +1,10 @@
+.background {
+  background: url(../images/background.png) rgb(54, 45, 45) 100%;
+  flex-shrink: 0;
+  width: 100%;
+  background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}

@@ -1,0 +1,63 @@
+.footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+
+.footerContainer {
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+.linkContainer {
+  display: flex;
+  column-gap: 25px;
+}
+.link {
+  color: #fff;
+  font-weight: normal;
+  font-size: 15px;
+}
+
+.link:hover {
+  transform: scale(0.95);
+  transition: transform 0.3s ease-in-out;
+}
+
+.title {
+  color: #fff;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.title:hover {
+  color: red;
+  transition: color 0.6s ease-in-out;
+}
+
+.icons {
+  display: flex;
+  column-gap: 9px;
+  align-items: center;
+}
+
+.iconApple {
+  width: 75px;
+  height: 28px;
+}
+
+.iconPlay {
+  width: 85px;
+  height: 33px;
+}
+
+@media only screen and (max-width: 768px) {
+  .footerContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+    row-gap: 20px;
+  }
+}

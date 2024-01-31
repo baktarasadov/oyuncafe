@@ -4,7 +4,7 @@ import React, { memo } from "react";
 const Header = () => {
   return (
     <>
-      <header>
+      <header style={{ position: "absolute", width: "100%", top: 0 }}>
         <nav>
           <NavList />
         </nav>
