@@ -1,4 +1,4 @@
-import { INavItemProps } from "@/types/layout/INav";
+import { INavItemProps } from "@/types/header/INav";
 import Link from "next/link";
 import React from "react";
 import styles from "../assets/style/styles.module.css";

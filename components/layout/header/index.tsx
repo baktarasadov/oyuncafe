@@ -1,13 +1,32 @@
 import NavList from "@/components/nav/navList";
+import { socialMediaList } from "@/constants/header/socialMedia";
+import Image from "next/image";
+import Link from "next/link";
 import React, { memo } from "react";
-
+import styles from "./assets/style/styles.module.css";
 const Header = () => {
   return (
     <>
-      <header style={{ position: "absolute", width: "100%", top: 0 }}>
-        <nav>
-          <NavList />
-        </nav>
+      <header className={styles.header}>
+        <div className={styles.headerContainer}>
+          <nav>
+            <NavList />
+          </nav>
+          <div style={{ color: "white" }}>radio</div>
+          <div className={styles.socialMediaContainer}>
+            {socialMediaList.map((element) => (
+              <Link key={element.alt} href={element.href}>
+                {
+                  <Image
+                    className={styles.mediaIcon}
+                    src={element.src}
+                    alt={element.alt}
+                  />
+                }
+              </Link>
+            ))}
+          </div>
+        </div>
       </header>
     </>
   );

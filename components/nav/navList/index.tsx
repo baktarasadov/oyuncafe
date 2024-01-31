@@ -1,9 +1,9 @@
-import { navList } from "@/constants/layout/nav";
 import React, { memo } from "react";
 import NavItem from "../navItem";
 import background from "../assets/icon/background.svg";
 import Image from "next/image";
 import styles from "../assets/style/styles.module.css";
+import { navList } from "@/constants/header/nav";
 const NavList = () => {
   return (
     <>

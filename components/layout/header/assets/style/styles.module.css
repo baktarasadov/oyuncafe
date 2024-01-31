@@ -1,0 +1,27 @@
+.header {
+  position: absolute;
+  width: 100%;
+}
+
+.headerContainer {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 13px;
+}
+
+.socialMediaContainer {
+  display: flex;
+  column-gap: 8px;
+  background: #ffffffb2;
+  height: fit-content;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.mediaIcon {
+  width: 23px;
+  height: 23px;
+}

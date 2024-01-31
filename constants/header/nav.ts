@@ -1,4 +1,4 @@
-import { INavItem } from "@/types/layout/INav";
+import { INavItem } from "@/types/header/INav";
 
 export const navList: INavItem[] = [
     {
