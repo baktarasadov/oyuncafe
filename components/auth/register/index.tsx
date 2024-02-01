@@ -118,7 +118,7 @@ const Register = () => {
             >
               Sign In
             </Button>
-            <Link className={styles.link} href={"/auth/login"}>
+            <Link className={styles.link} href={"/login"}>
               Already have an account?
             </Link>
           </form>

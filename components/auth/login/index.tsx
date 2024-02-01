@@ -74,7 +74,7 @@ const Login = () => {
           </form>
         </div>
         <div className={styles.end}>
-          <Link href={"/auth/register"} className={styles.memberBtn}>
+          <Link href={"/register"} className={styles.memberBtn}>
             Create a new account
           </Link>
           <Button className={styles.forgotBtn} type="submit">

@@ -1,10 +1,59 @@
-.background {
-  background: url(../images/background.png) rgb(54, 45, 45) 100%;
-  flex-shrink: 0;
-  width: 100%;
-  background-color: black;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
+.homeMain {
+  margin-top: 30px;
+}
+.buttonContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.buttonContainer * {
+  width: 195px;
+  height: 42px;
+  border: 0;
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #fff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.buttonContainer *:hover {
+  transform: scale(0.98);
+  transition: transform 0.8s ease-in-out;
+}
+
+.buttonContainer .guesBtn {
+  background: #ff7c04;
+}
+
+.facebookBtn {
+  background: #3a40b5;
+  display: flex;
+  column-gap: 6px;
+}
+
+.googleBtn {
+  background: #d82842;
+  display: flex;
+  column-gap: 8px;
+}
+
+.loginBtn {
+  background: #7d4aee;
+}
+
+.registerBtn {
+  background: #d41431;
+}
+.icon {
+  width: 11px;
+  height: 20px;
 }

@@ -8,8 +8,8 @@ import { nunitoFont } from "@/utils/font";
 const Footer = () => {
   return (
     <>
-      <footer className={`${styles.footer} ${nunitoFont.className}`}>
-        <div className={styles.footerContainer}>
+      <footer className={` ${styles.footer} ${nunitoFont.className}`}>
+        <div className={`container ${styles.footerContainer}`}>
           <div className={styles.linkContainer}>
             <Link className={styles.link} href={"/"}>
               Privacy Policy

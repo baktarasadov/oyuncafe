@@ -1,15 +1,14 @@
 .header {
-  position: absolute;
+  position: sticky;
+  top: 0;
   width: 100%;
 }
 
 .headerContainer {
-  width: 90%;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 13px;
+  padding-top: 13px;
 }
 
 .socialMediaContainer {

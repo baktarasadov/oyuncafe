@@ -1,7 +1,7 @@
 import { Dancing_Script, Koh_Santepheap, Nunito } from "next/font/google";
 
 export const nunitoFont = Nunito({
-    weight: ['400', '700'],
+    weight: ['400', '700', '900'],
     style: ['normal', 'italic'],
     subsets: ['latin'],
     display: 'swap',
