@@ -1,5 +1,7 @@
 .homeMain {
   margin-top: 30px;
+  display: flex;
+  column-gap: 100px;
 }
 .buttonContainer {
   height: 100%;
@@ -56,4 +58,57 @@
 .icon {
   width: 11px;
   height: 20px;
+}
+
+.playerCount {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+  background: #295456;
+  border-radius: 5px;
+  display: flex;
+  column-gap: 5px;
+  padding: 7px 9px;
+  font-weight: 900;
+  line-height: 9px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.playerCount p,
+.playerCount span {
+  font-size: 14px;
+  color: #f5b60f;
+}
+.playerCount span {
+  color: #fff;
+}
+
+.playerCount *:hover {
+  transform: scale(0.98);
+  transition: transform 0.4s ease-in-out;
+}
+
+.right {
+  width: 100%;
+  position: relative;
+}
+.adverst {
+  background: #88adb880;
+  height: 152px;
+  border-radius: 10px;
+  margin-top: 30px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.giftImage {
+  position: absolute;
+  bottom: 14px;
+  left: -40px;
+  width: auto;
+  height: 180px;
 }

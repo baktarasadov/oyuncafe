@@ -5,12 +5,14 @@ import facebook from "./assets/icon/facebook.svg";
 import play from "./assets/icon/play-store.svg";
 import Image from "next/image";
 import Link from "next/link";
-
+import gift from "./assets/image/gift.svg";
+import poker from "./assets/image/poker.svg";
+import { nunitoFont } from "@/utils/font";
 const HomeContainer = () => {
   return (
     <>
       <main>
-        <div className={`container ${styles.homeMain}`}>
+        <div className={`container ${styles.homeMain} ${nunitoFont.className}`}>
           <aside className={styles.buttonContainer}>
             <Button className={styles.guesBtn}>Misafir Olarak Oyna</Button>
             <Button className={styles.facebookBtn}>
@@ -36,7 +38,24 @@ const HomeContainer = () => {
               Kayıt Ol
             </Link>
           </aside>
-          <section>{/* <Register /> */}</section>
+          <div className={styles.right}>
+            <section className={styles.adverst}>
+              <div>
+                <Image src={gift} alt="gift" className={styles.giftImage} />
+              </div>
+              <div>
+                <h2>Arkadaşlarınla Oyna!</h2>
+                <p>Eşsiz ödüller seni bekliyor!</p>
+              </div>
+              <div>
+                <Image src={poker} alt="poker" />
+              </div>
+            </section>
+            <div className={styles.playerCount}>
+              <p>Count of Players:</p>
+              <span>5,275</span>
+            </div>
+          </div>
         </div>
       </main>
     </>
