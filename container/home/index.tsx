@@ -40,15 +40,17 @@ const HomeContainer = () => {
           </aside>
           <div className={styles.right}>
             <section className={styles.adverst}>
-              <div>
-                <Image src={gift} alt="gift" className={styles.giftImage} />
+              <div className={styles.giftContainer}>
+                <Image src={gift} alt="gift" objectFit="cover" fill />
+              </div>
+              <div className={styles.titleContainer}>
+                <h2 className={styles.title}>Play with your friends!</h2>
+                <p className={styles.subTitle}>
+                  Unique rewards are waiting for you!
+                </p>
               </div>
               <div>
-                <h2>Arkadaşlarınla Oyna!</h2>
-                <p>Eşsiz ödüller seni bekliyor!</p>
-              </div>
-              <div>
-                <Image src={poker} alt="poker" />
+                <Image src={poker} alt="poker" className={styles.pokerImage} />
               </div>
             </section>
             <div className={styles.playerCount}>
