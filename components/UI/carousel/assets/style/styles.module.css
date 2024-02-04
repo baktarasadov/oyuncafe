@@ -1,0 +1,11 @@
+.carousel {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  column-gap: 15px;
+}

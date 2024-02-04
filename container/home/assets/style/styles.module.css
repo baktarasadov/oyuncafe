@@ -3,62 +3,6 @@
   display: flex;
   column-gap: 100px;
 }
-.buttonContainer {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  row-gap: 20px;
-}
-
-.buttonContainer * {
-  width: 195px;
-  height: 42px;
-  border: 0;
-  font-size: 13px;
-  font-weight: 900;
-  line-height: 18px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #fff;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-}
-
-.buttonContainer *:hover {
-  transform: scale(0.98);
-  transition: transform 0.8s ease-in-out;
-}
-
-.buttonContainer .guesBtn {
-  background: #ff7c04;
-}
-
-.facebookBtn {
-  background: #3a40b5;
-  display: flex;
-  column-gap: 6px;
-}
-
-.googleBtn {
-  background: #d82842;
-  display: flex;
-  column-gap: 8px;
-}
-
-.loginBtn {
-  background: #7d4aee;
-}
-
-.registerBtn {
-  background: #d41431;
-}
-.icon {
-  width: 11px;
-  height: 20px;
-}
 
 .playerCount {
   position: absolute;
@@ -78,7 +22,7 @@
 
 .playerCount p,
 .playerCount span {
-  font-size: 14px;
+  font-size: 12px;
   color: #f5b60f;
 }
 .playerCount span {
@@ -94,48 +38,13 @@
   width: 100%;
   position: relative;
 }
-.adverst {
-  background: #88adb880;
-  height: 152px;
-  border-radius: 10px;
-  margin-top: 30px;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
+
+.players {
+  margin-top: 25px;
 }
 
-.giftContainer {
-  position: relative;
-  width: 230px;
-  height: 200px;
-  left: -40px;
-  bottom: 20px;
-}
-
-.titleContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* row-gap: 3px; */
-}
-.title,
-.subTitle {
-  font-size: 21px;
-  font-weight: 900;
-  line-height: 20px;
-  letter-spacing: 0em;
-  color: #ffe834;
-}
-
-.subTitle {
-  font-size: 12px;
-  color: #fff;
-}
-
-.pokerImage {
-  width: auto;
-  height: 220px;
-  margin-top: 30px;
+@media (max-width: 768px) {
+  .homeMain {
+    column-gap: 50px;
+  }
 }
