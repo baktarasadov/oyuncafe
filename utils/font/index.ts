@@ -8,7 +8,7 @@ export const nunitoFont = Nunito({
 })
 
 export const santepheapFont = Koh_Santepheap({
-    weight: ['400', '700'],
+    weight: ['400', '700', '900'],
     style: ['normal'],
     subsets: ['latin'],
     display: 'swap',
