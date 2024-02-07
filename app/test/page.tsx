@@ -1,8 +1,12 @@
-import Modal from "@/components/UI/modal";
+import Alma from "@/components/alma";
 import React from "react";
 
 const page = () => {
-  return <div>{/* <Modal /> */}</div>;
+  return (
+    <div>
+      <Alma />
+    </div>
+  );
 };
 
 export default page;

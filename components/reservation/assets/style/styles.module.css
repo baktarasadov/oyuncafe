@@ -1,0 +1,139 @@
+.reservationList {
+  background: linear-gradient(180deg, #91011a 0%, #56000d 63.39%);
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 5px 4px 0px #000000;
+}
+
+.reservationList h2 {
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #fff;
+  padding-top: 15px;
+  padding-bottom: 0;
+  margin-bottom: 15px;
+}
+
+.list {
+  max-height: 60vh;
+  padding-bottom: 20px;
+  overflow: auto;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  scrollbar-color: #91011a #000;
+  scrollbar-width: 1;
+  padding-right: 15px;
+}
+
+.reservationItem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #5b000c;
+  height: 47px;
+  border-radius: 5px;
+  box-shadow: -2px -2px 5px 5px #340112 inset;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  margin-top: 10px;
+  color: #fff;
+}
+.reservationItem:hover {
+  transform: scale(0.99);
+  transition: transform 0.4s ease-in-out;
+}
+.title {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0em;
+  width: 35%;
+  padding-left: 15px;
+}
+
+.users {
+  display: flex;
+  align-items: center;
+  column-gap: 7px;
+  width: 20%;
+}
+
+.userIcon {
+  width: 22px;
+  height: 18px;
+}
+
+.users span {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+  width: 25%;
+}
+.price span {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.price .priceIcon {
+  width: 26px;
+  height: 26px;
+}
+
+.btn {
+  background-color: inherit;
+  border: 0;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+@media screen and (max-width: 600px) {
+  .reservationList h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .title {
+    font-size: 10px;
+  }
+  .userIcon {
+    width: 15px;
+    height: 12px;
+  }
+  .users {
+    column-gap: 5px;
+  }
+  .users span {
+    font-size: 10px;
+  }
+  .price {
+    column-gap: 1px;
+  }
+  .price .priceIcon {
+    width: 15px;
+    height: 12px;
+  }
+  .price span {
+    font-size: 9px;
+  }
+  .btn {
+    font-size: 9px;
+  }
+}
