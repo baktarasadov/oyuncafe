@@ -9,15 +9,13 @@ import HomePlayers from "@/components/home/players";
 const HomeContainer = () => {
   return (
     <>
-      <main className={styles.main}>
+      <div className={styles.main}>
         <div className={`container ${styles.homeMain} ${nunitoFont.className}`}>
           <aside className={styles.left}>
             <HomeAside />
           </aside>
           <div className={styles.right}>
-            <section>
-              <HomeAdvertising />
-            </section>
+            <section>{/* <HomeAdvertising /> */}</section>
             <section className={styles.players}>
               <HomePlayers />
             </section>
@@ -27,7 +25,7 @@ const HomeContainer = () => {
             </div>
           </div>
         </div>
-      </main>
+      </div>
     </>
   );
 };

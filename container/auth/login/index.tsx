@@ -5,11 +5,11 @@ import Login from "@/components/auth/login";
 const LoginContainer = () => {
   return (
     <>
-      <main className={styles.background}>
+      <div className={styles.background}>
         <section>
           <Login />
         </section>
-      </main>
+      </div>
     </>
   );
 };

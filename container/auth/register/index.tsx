@@ -4,11 +4,11 @@ import styles from "../assets/style/styles.module.css";
 const RegisterContainer = () => {
   return (
     <>
-      <main className={styles.background}>
+      <div className={styles.background}>
         <section>
           <Register />
         </section>
-      </main>
+      </div>
     </>
   );
 };

@@ -1,7 +1,8 @@
 .header {
-  position: sticky;
+  /* position: sticky;
   top: 0;
   width: 100%;
+  z-index: 100; */
 }
 
 .headerContainer {
@@ -23,4 +24,11 @@
 .mediaIcon {
   width: 23px;
   height: 23px;
+}
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+  .mediaIcon {
+    width: 18px;
+    height: 18px;
+  }
 }
