@@ -15,7 +15,9 @@ const HomeContainer = () => {
             <HomeAside />
           </aside>
           <div className={styles.right}>
-            <section>{/* <HomeAdvertising /> */}</section>
+            <section>
+              <HomeAdvertising />
+            </section>
             <section className={styles.players}>
               <HomePlayers />
             </section>

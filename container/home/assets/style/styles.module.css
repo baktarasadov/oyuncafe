@@ -40,11 +40,15 @@
 }
 
 .players {
-  margin-top: 25px;
+  margin-top: 30px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 896px) {
   .homeMain {
-    column-gap: 50px;
+    column-gap: 40px;
+  }
+  .playerCount p,
+  .playerCount span {
+    font-size: 10px;
   }
 }
