@@ -34,7 +34,7 @@
   color: #f5b60f;
 }
 
-@media only screen and (max-width: 896px) {
+@media only screen and (max-width: 1024px) {
   .player {
     width: 70px;
     height: 70px;

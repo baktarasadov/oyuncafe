@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import styles from "./assets/style/styles.module.css";
 import { santepheapFont } from "@/utils/font";
 import { IPlayerCard } from "@/types/home/iPlayer";
@@ -14,4 +14,4 @@ const PlayerCard: React.FC<IPlayerCard> = ({ id, name, score }) => {
   );
 };
 
-export default PlayerCard;
+export default memo(PlayerCard);

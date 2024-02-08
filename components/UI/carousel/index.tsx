@@ -1,4 +1,4 @@
-import React, { memo, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import back from "./assets/icon/back.svg";
 import next from "./assets/icon/next.svg";
 import Image from "next/image";
@@ -6,8 +6,9 @@ import styles from "./assets/style/styles.module.css";
 import PlayerCard from "@/components/players/playerCard";
 import { ICarousel } from "@/types/ui/ICarousel";
 import useCardPagination from "@/hoc/useCardPagination";
+import useMaxVisibleCards from "@/hoc/useMaxVisibleCards";
 const Carousel: React.FC<ICarousel> = ({ playerList }) => {
-  const maxVisibleCards = 6;
+  const maxVisibleCards = useMaxVisibleCards();
   const { currentStartIndex, handleLeftClick, handleRightClick, visibleCards } =
     useCardPagination(0, maxVisibleCards, playerList);
   return (
