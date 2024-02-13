@@ -10,7 +10,6 @@ import Button from "@/components/UI/button";
 import Modal from "@/components/UI/modal";
 const Footer = () => {
   const [click, setClick] = useState<boolean>(false);
-  console.log("use effect renderer");
   const handleClick = (): void => {
     setClick(!click);
   };

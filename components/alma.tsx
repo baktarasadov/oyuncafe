@@ -1,21 +1,19 @@
 "use client";
-import React, { useState } from "react";
-import Modal from "./UI/modal";
-import ReservationList from "./reservation/reservationList";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import dotenv from "dotenv";
+import { getToken } from "@/service/httpService";
+
+dotenv.config();
 
 const Alma = () => {
-  const [click, setClick] = useState<boolean>(true);
-  const handleClick = () => {
-    setClick(!click);
+  const handle = async () => {
+    await getToken("/Auth/preRegister");
   };
-
   return (
     <div>
-      {click && (
-        <Modal handleClick={handleClick}>
-          <ReservationList />
-        </Modal>
-      )}
+      <button onClick={handle}>click me</button>
+      <p style={{ color: "red" }}>{process.env.IP_URL}</p>
     </div>
   );
 };
