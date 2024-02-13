@@ -9,6 +9,26 @@ const Alma = () => {
     setClick(!click);
   };
 
+  useEffect(() => {
+    let config = {
+      method: 'GET',
+      maxBodyLength: Infinity,
+      url: 'https://oyuncafeapi.kemalcelikturk.com/Auth/preRegister',
+      headers: {
+        'X-Client-IP': '127.0.0.1',
+        'Content-Type': 'application/json'
+      }
+    };
+
+    axios.request(config)
+      .then((response) => {
+        console.log(JSON.stringify(response.data));
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
   return (
     <div>
       {click && (
