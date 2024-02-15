@@ -16,10 +16,10 @@ import { getToken, postAuth } from "@/service/httpService";
 const Register = () => {
   const onSubmit = async (values: IFormRegister) => {
     const data = await getToken("/Auth/preRegister");
-    const response = await postAuth<any>("/Auth/register", {
-      body: { ...values },
-    });
-    console.log(response);
+    // const response = await postAuth<any>("/Auth/register", {
+    //   body: { ...values },
+    // });
+    // console.log(response);
   };
   const formik = useFormik<IFormRegister>({
     initialValues: {
