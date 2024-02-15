@@ -1,0 +1,54 @@
+.homeMain {
+  margin-top: 30px;
+  display: flex;
+  column-gap: 100px;
+}
+
+.playerCount {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+  background: #295456;
+  border-radius: 5px;
+  display: flex;
+  column-gap: 5px;
+  padding: 7px 9px;
+  font-weight: 900;
+  line-height: 9px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.playerCount p,
+.playerCount span {
+  font-size: 12px;
+  color: #f5b60f;
+}
+.playerCount span {
+  color: #fff;
+}
+
+.playerCount *:hover {
+  transform: scale(0.98);
+  transition: transform 0.4s ease-in-out;
+}
+
+.right {
+  width: 100%;
+  position: relative;
+}
+
+.players {
+  margin-top: 30px;
+}
+
+@media (max-width: 896px) {
+  .homeMain {
+    column-gap: 40px;
+  }
+  .playerCount p,
+  .playerCount span {
+    font-size: 10px;
+  }
+}

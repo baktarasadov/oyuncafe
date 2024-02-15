@@ -1,0 +1,48 @@
+.controlButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.controlButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  position: relative;
+  padding: 5px 10px;
+  transition: .3s;
+  border: none;
+  cursor: pointer;
+}
+.controlButton::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #1b8ee0;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+}
+.controlButton::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #054ee8;
+  border-radius: 10px;
+  top: 10px;
+  left: 0;
+  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.controlButton:hover {
+  transform: translateY(-5px);
+}
+
+.controlIcon {
+  position: relative;
+  z-index: 1;
+  width: 43px;
+  height: 43px;
+}
