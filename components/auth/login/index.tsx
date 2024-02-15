@@ -11,7 +11,7 @@ import Link from "next/link";
 import { loginSchema } from "@/schema/login";
 import { loginInputs } from "@/constants/auth/login";
 const Login = () => {
-  const [sohowError, setShowError] = useState<boolean>(false);
+  const [showError, setShowError] = useState<boolean>(false);
   const onSubmit = async (values: IFormLogin) => {
     console.log(values);
   };
@@ -55,7 +55,7 @@ const Login = () => {
                     type={element.type}
                     id={element.name}
                   />
-                  {sohowError && (
+                  {showError && (
                     <p className={styles.error}>
                       {formik.errors[element.name as keyof IFormLogin]}
                     </p>

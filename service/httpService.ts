@@ -1,3 +1,4 @@
+import { IPostAuthBody } from '@/types/share/IBody';
 import { IResponse } from '@/types/share/IResponse';
 import axios, { AxiosError, AxiosInstance, AxiosResponse } from 'axios';
 import dotenv from 'dotenv';
@@ -12,8 +13,7 @@ const getIpAddress = async (): Promise<string> => {
         return '';
     }
 };
-
-const createAxiosInstance = async (): Promise<AxiosInstance> => {
+export const createAxiosInstance = async (): Promise<AxiosInstance> => {
     const ip = await getIpAddress();
 
     return axios.create({
@@ -22,18 +22,34 @@ const createAxiosInstance = async (): Promise<AxiosInstance> => {
         headers: {
             'X-Client-IP': ip,
             'Content-Type': 'application/json',
+            'Authorization': cookie.get("token")
         },
     });
 };
 
-export const postWithAuth = async <T>(url: string, data: T): Promise<IResponse<T>> => {
+export const postAuth = async <T>(url: string, data: IPostAuthBody): Promise<IResponse<T>> => {
     try {
         const instance = await createAxiosInstance();
-        const response: AxiosResponse<T> = await instance.post(url, data);
-        return { data: response.data, statusCode: response.status };
+        const response = await instance.post(url, {
+            ...data
+        });
+        const token = response.data.token;
+        if (token) {
+            cookie.set("token", token, {
+                secure: true,
+                // httpOnly: true,
+                expires: 7,
+                sameSite: "strict"
+            });
+            return { data: response.data.content, statusCode: response.status };
+        }
+
+        console.log(response);
+
+        return { error: response.data.errorMessage.join(""), statusCode: response.status };
     } catch (error: any) {
         console.log(error);
-        return { error: error.response.data.message || "" };
+        return { error: error.message }
     }
 };
 
@@ -41,24 +57,24 @@ export const postWithAuth = async <T>(url: string, data: T): Promise<IResponse<T
 
 // export const getWithoutAuth  =async
 
-export const getToken = async (url: string): Promise<void> => {
+export const getToken = async (url: string): Promise<boolean> => {
     try {
-        console.log(process.env.BASE_URL);
         const instance = await createAxiosInstance();
         const response = await instance.get(url);
-
         if (response.status === 200 && response.data && response.data.gecici_token) {
             const token = response.data.gecici_token;
             cookie.set("token", token, {
-                // secure: true,
-                httpOnly: true,
+                secure: true,
+                // httpOnly: true,
                 expires: 7,
                 sameSite: "strict"
             });
+            return true;
 
-            console.log(cookie.get("token"));
         }
     } catch (error) {
         console.error("Token alınamadı:", error);
+        return false;
     }
+    return false;
 }

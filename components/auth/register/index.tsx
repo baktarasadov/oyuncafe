@@ -4,27 +4,22 @@ import { registerInputs } from "@/constants/auth/register";
 import { registerSchema } from "@/schema/register";
 import { IFormRegister } from "@/types/auth/IAuth";
 import { useFormik } from "formik";
-import React, { memo, useState } from "react";
+import React, { memo, useCallback, useEffect, useState } from "react";
 import styles from "../assets/style/styles.module.css";
 import { nunitoFont } from "@/utils/font";
 import { IoClose } from "react-icons/io5";
 import Button from "@/components/UI/button";
 import Link from "next/link";
 import { VscEye, VscEyeClosed } from "react-icons/vsc";
+import useFormValidation from "@/hoc/useFormValidation";
+import { getToken, postAuth } from "@/service/httpService";
 const Register = () => {
-  const [selectedOption, setSelectedOption] = useState<string>("male");
-  const [sohowError, setShowError] = useState<boolean>(false);
-  const [showPassword, setShowPassword] = useState<boolean>(true);
   const onSubmit = async (values: IFormRegister) => {
-    console.log(values);
-  };
-
-  const handleButtonClick = (): void => {
-    if (Object.keys(formik.errors).length > 0) {
-      setShowError(true);
-    } else {
-      setShowError(false);
-    }
+    const data = await getToken("/Auth/preRegister");
+    const response = await postAuth<any>("/Auth/register", {
+      body: { ...values },
+    });
+    console.log(response);
   };
   const formik = useFormik<IFormRegister>({
     initialValues: {
@@ -36,6 +31,10 @@ const Register = () => {
     onSubmit,
   });
 
+  const { showError, setShowError, handleButtonClick } =
+    useFormValidation(formik);
+  const [selectedOption, setSelectedOption] = useState<string>("male");
+  const [showPassword, setShowPassword] = useState<boolean>(true);
   return (
     <>
       <div>
@@ -75,7 +74,7 @@ const Register = () => {
                       {showPassword ? <VscEye /> : <VscEyeClosed />}
                     </span>
                   )}
-                  {sohowError && (
+                  {showError && (
                     <p className={styles.error}>
                       {formik.errors[element.name as keyof IFormRegister]}
                     </p>
