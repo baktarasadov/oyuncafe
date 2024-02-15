@@ -4,6 +4,8 @@ import "@/styles/globals.css";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 
+import HeaderRoot from "@/components/layoutRoot/header";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -19,7 +21,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
+        {/* <Header /> */}
+        <HeaderRoot />
 
         <main style={{ minHeight: "85vh" }}>{children}</main>
         <Footer />
