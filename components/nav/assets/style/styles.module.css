@@ -28,9 +28,10 @@
   align-items: center;
 }
 
-.link:hover {
-  transform: scale(0.95);
-  transition: transform 0.3s ease-in-out;
+.navItem:hover {
+  transform: translateY(-2px);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: 0.3s ease-in-out;
 }
 
 @media only screen and (max-width: 768px) and (orientation: landscape) {

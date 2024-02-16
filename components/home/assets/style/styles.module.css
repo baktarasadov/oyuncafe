@@ -20,11 +20,13 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .buttonContainer *:hover {
-  transform: scale(0.98);
-  transition: transform 0.8s ease-in-out;
+  transform: scale(0.97);
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  transition: 0.8s ease-in-out;
 }
 
 .buttonContainer .guesBtn {
@@ -58,7 +60,7 @@
 @media (max-width: 768px) {
   .buttonContainer * {
     width: 125px;
-    font-size: 9px;
+    font-size: 8px;
     height: 30px;
   }
   .icon {
