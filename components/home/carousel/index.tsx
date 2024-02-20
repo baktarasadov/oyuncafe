@@ -1,13 +1,13 @@
-import React, { memo, useEffect, useState } from "react";
-import back from "./assets/icon/back.svg";
-import next from "./assets/icon/next.svg";
+import React, { memo } from "react";
 import Image from "next/image";
-import styles from "./assets/style/styles.module.css";
-import PlayerCard from "@/components/players/playerCard";
+import styles from "../assets/style/styles.module.css";
+import HomePlayerCard from "@/components/home/playerCard";
 import { ICarousel } from "@/types/ui/ICarousel";
 import useCardPagination from "@/hoc/useCardPagination";
 import useMaxVisibleCards from "@/hoc/useMaxVisibleCards";
-const Carousel: React.FC<ICarousel> = ({ playerList }) => {
+import back from "../assets/icon/back.svg";
+import next from "../assets/icon/next.svg";
+const HomeCarousel: React.FC<ICarousel> = ({ playerList }) => {
   const maxVisibleCards = useMaxVisibleCards();
   const { currentStartIndex, handleLeftClick, handleRightClick, visibleCards } =
     useCardPagination(0, maxVisibleCards, playerList);
@@ -19,7 +19,7 @@ const Carousel: React.FC<ICarousel> = ({ playerList }) => {
           <div className={styles.content}>
             {visibleCards.slice(0, 6).map((element) => (
               <div key={element.id}>
-                <PlayerCard
+                <HomePlayerCard
                   id={element.id}
                   score={element.score}
                   name={element.score}
@@ -34,4 +34,4 @@ const Carousel: React.FC<ICarousel> = ({ playerList }) => {
   );
 };
 
-export default memo(Carousel);
+export default memo(HomeCarousel);

@@ -1,5 +1,5 @@
 import Button from "@/components/UI/button";
-import Carousel from "@/components/UI/carousel";
+import HomeCarousel from "@/components/home/carousel";
 import { IPlayerCard } from "@/types/home/iPlayer";
 import React, { memo } from "react";
 import styles from "../assets/style/styles.module.css";
@@ -73,7 +73,7 @@ const HomePlayers = () => {
             En iyiler
           </Button>
         </div>
-        <Carousel playerList={list} />
+        <HomeCarousel playerList={list} />
       </div>
     </>
   );

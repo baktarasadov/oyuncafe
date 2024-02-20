@@ -2,7 +2,7 @@
 import React from "react";
 import styles from "./assets/style/styles.module.css";
 import { nunitoFont } from "@/utils/font";
-import Carousel from "@/components/UI/carousel";
+import Carousel from "@/components/home/carousel";
 import HomeAside from "@/components/home/aside";
 import HomeAdvertising from "@/components/home/advertising";
 import HomePlayers from "@/components/home/players";
