@@ -1,6 +1,6 @@
 import Button from "@/components/UI/button";
 import HomeCarousel from "@/components/home/carousel";
-import { IPlayerCard } from "@/types/home/iPlayer";
+import { IPlayerCard } from "@/types/home/IPlayer";
 import React, { memo } from "react";
 import styles from "../assets/style/styles.module.css";
 import { nunitoFont } from "@/utils/font";

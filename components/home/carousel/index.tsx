@@ -2,7 +2,7 @@ import React, { memo } from "react";
 import Image from "next/image";
 import styles from "../assets/style/styles.module.css";
 import HomePlayerCard from "@/components/home/playerCard";
-import { ICarousel } from "@/types/ui/ICarousel";
+import { ICarousel } from "@/types/home/ICarousel";
 import useCardPagination from "@/hoc/useCardPagination";
 import useMaxVisibleCards from "@/hoc/useMaxVisibleCards";
 import back from "../assets/icon/back.svg";

@@ -1,4 +1,4 @@
-import { IPlayerCard } from "../home/iPlayer";
+import { IPlayerCard } from "./IPlayer";
 
 export interface ICarousel {
     playerList: IPlayerCard[]

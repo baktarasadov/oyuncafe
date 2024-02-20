@@ -1,4 +1,4 @@
-import { IPlayerCard } from '@/types/home/iPlayer';
+import { IPlayerCard } from '@/types/home/IPlayer';
 import { useState } from 'react';
 
 const useCardPagination = (initialStartIndex: number, maxVisibleCards: number, playerList: IPlayerCard[]) => {
