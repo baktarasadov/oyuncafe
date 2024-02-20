@@ -66,7 +66,7 @@ const Login = () => {
                 </div>
               ))}
             </div>
-            <p>{error}</p>
+            <p style={{ color: "red" }}>{error}</p>
             <div className={styles.btnContainer}>
               <Link href={"/"} className={styles.closeBtn}>
                 Close
