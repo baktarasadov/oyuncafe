@@ -13,19 +13,18 @@ import Link from "next/link";
 import { VscEye, VscEyeClosed } from "react-icons/vsc";
 import useFormValidation from "@/hoc/useFormValidation";
 import { getToken, postAuth } from "@/service/httpService";
+import { useRouter } from "next/navigation";
+import useAuth from "@/hoc/auth/useAuth";
 const Register = () => {
-  const onSubmit = async (values: IFormRegister) => {
-    const data = await getToken("/Auth/preRegister");
-    // const response = await postAuth<any>("/Auth/register", {
-    //   body: { ...values },
-    // });
-    // console.log(response);
-  };
+  const [selectedOption, setSelectedOption] = useState<string>("male");
+  const [showPassword, setShowPassword] = useState<boolean>(false);
+  const { loading, error, onSubmit } = useAuth("/Auth/register");
+
   const formik = useFormik<IFormRegister>({
     initialValues: {
-      fullname: "",
+      username: "",
       email: "",
-      password: "",
+      pass: "",
     },
     validationSchema: registerSchema,
     onSubmit,
@@ -33,8 +32,15 @@ const Register = () => {
 
   const { showError, setShowError, handleButtonClick } =
     useFormValidation(formik);
-  const [selectedOption, setSelectedOption] = useState<string>("male");
-  const [showPassword, setShowPassword] = useState<boolean>(true);
+
+  if (loading) {
+    return (
+      <>
+        <div style={{ color: "white", fontSize: "30px" }}>Loading...</div>
+      </>
+    );
+  }
+
   return (
     <>
       <div>
@@ -46,9 +52,7 @@ const Register = () => {
           <form onSubmit={formik.handleSubmit} className={styles.registerForm}>
             {registerInputs.map((element) => (
               <div key={element.name} className={styles.inputGroup}>
-                <label htmlFor={element.name}>
-                  {element.name[0].toUpperCase() + element.name.slice(1)}
-                </label>
+                <label htmlFor={element.name}>{element.label}</label>
                 <div className={styles.input}>
                   <Input
                     value={formik.values[element.name as keyof IFormRegister]}
@@ -71,7 +75,7 @@ const Register = () => {
                       className={styles.password}
                       onClick={() => setShowPassword(!showPassword)}
                     >
-                      {showPassword ? <VscEye /> : <VscEyeClosed />}
+                      {!showPassword ? <VscEye /> : <VscEyeClosed />}
                     </span>
                   )}
                   {showError && (
@@ -82,7 +86,8 @@ const Register = () => {
                 </div>
               </div>
             ))}
-            <div className={styles.radioGroup}>
+
+            {/* <div className={styles.radioGroup}>
               <p>Gender</p>
               <div className={styles.radioContainer}>
                 <div>
@@ -109,7 +114,9 @@ const Register = () => {
                   <label htmlFor="Kişi">Female</label>
                 </div>
               </div>
-            </div>
+            </div> */}
+            <p className={styles.errorMessage}>{error}</p>
+
             <Button
               className={`${styles.btnRegister} ${nunitoFont.className}`}
               type="submit"

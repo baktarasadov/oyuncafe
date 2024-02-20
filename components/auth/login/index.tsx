@@ -10,41 +10,44 @@ import Button from "@/components/UI/button";
 import Link from "next/link";
 import { loginSchema } from "@/schema/login";
 import { loginInputs } from "@/constants/auth/login";
+import useFormValidation from "@/hoc/useFormValidation";
+import useAuth from "@/hoc/auth/useAuth";
 const Login = () => {
-  const [showError, setShowError] = useState<boolean>(false);
-  const onSubmit = async (values: IFormLogin) => {
-    console.log(values);
-  };
+  const { loading, setError, error, onSubmit } = useAuth("/Auth/login");
 
-  const handleButtonClick = (): void => {
-    if (Object.keys(formik.errors).length > 0) {
-      setShowError(true);
-    } else {
-      setShowError(false);
-    }
-  };
   const formik = useFormik<IFormLogin>({
     initialValues: {
-      fullname: "",
-      password: "",
+      username: "",
+      pass: "",
     },
     validationSchema: loginSchema,
     onSubmit,
   });
+  const { showError, setShowError, handleButtonClick } =
+    useFormValidation(formik);
 
+  if (loading) {
+    return (
+      <>
+        <div style={{ color: "white", fontSize: "30px" }}>Loading...</div>
+      </>
+    );
+  }
   return (
     <>
       <div>
         <div className={`${styles.mainForm} ${nunitoFont.className}`}>
           <h2 className={styles.title}>Login</h2>
 
-          <form onSubmit={formik.handleSubmit}>
+          <form
+            style={{ position: "relative" }}
+            onSubmit={formik.handleSubmit}
+            onChange={() => setError("")}
+          >
             <div className={styles.loginForm}>
               {loginInputs.map((element) => (
                 <div key={element.name} className={styles.inputGroup}>
-                  <label htmlFor={element.name}>
-                    {element.name[0].toUpperCase() + element.name.slice(1)}
-                  </label>
+                  <label htmlFor={element.name}>{element.label}</label>
                   <Input
                     value={formik.values[element.name as keyof IFormLogin]}
                     onChange={(e) => {
@@ -63,6 +66,7 @@ const Login = () => {
                 </div>
               ))}
             </div>
+            <p>{error}</p>
             <div className={styles.btnContainer}>
               <Link href={"/"} className={styles.closeBtn}>
                 Close

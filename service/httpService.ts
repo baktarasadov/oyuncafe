@@ -31,7 +31,7 @@ export const postAuth = async <T>(url: string, data: IPostAuthBody): Promise<IRe
     try {
         const instance = await createAxiosInstance();
         const response = await instance.post(url, {
-            ...data
+            ...data.body
         });
         const token = response.data.token;
         if (token) {

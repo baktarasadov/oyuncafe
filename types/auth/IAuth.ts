@@ -1,16 +1,18 @@
 export default interface IAuthInputList {
     name: string;
+    label: string;
     type: string;
     placeholder: string;
 }
 
-export interface IFormRegister {
-    fullname: string;
+interface IBase {
+    username: string,
+    pass: string
+}
+export interface IFormRegister extends IBase {
     email: string;
-    password: string;
 }
 
-export interface IFormLogin {
-    fullname: string;
-    password: string;
+export interface IFormLogin extends IBase {
+
 }

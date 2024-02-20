@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { memo } from "react";
 import styles from "./assets/style/styles.module.css";
+import MusicPlayer from "@/components/share/musicPlayer";
 const Header = () => {
   return (
     <>
@@ -12,7 +13,9 @@ const Header = () => {
           <nav>
             <NavList />
           </nav>
-          <div style={{ color: "white" }}>radio</div>
+          <div style={{ color: "white" }}>
+            <MusicPlayer />
+          </div>
           <div className={styles.socialMediaContainer}>
             {socialMediaList.map((element) => (
               <Link key={element.alt} href={element.href}>
