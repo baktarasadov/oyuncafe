@@ -12,8 +12,10 @@ import { loginSchema } from "@/schema/login";
 import { loginInputs } from "@/constants/auth/login";
 import useFormValidation from "@/hoc/useFormValidation";
 import useAuth from "@/hoc/auth/useAuth";
+import { VscEye, VscEyeClosed } from "react-icons/vsc";
 const Login = () => {
   const { loading, setError, error, onSubmit } = useAuth("/Auth/login");
+  const [showPassword, setShowPassword] = useState<boolean>(false);
 
   const formik = useFormik<IFormLogin>({
     initialValues: {
@@ -38,9 +40,8 @@ const Login = () => {
       <div>
         <div className={`${styles.mainForm} ${nunitoFont.className}`}>
           <h2 className={styles.title}>Login</h2>
-
           <form
-            style={{ position: "relative" }}
+            className={styles.form}
             onSubmit={formik.handleSubmit}
             onChange={() => setError("")}
           >
@@ -54,10 +55,27 @@ const Login = () => {
                       formik.handleChange(e);
                       setShowError(false);
                     }}
+                    className={
+                      element.type === "password" ? styles.relative : ""
+                    }
                     placeholder={element.placeholder}
-                    type={element.type}
+                    type={
+                      element.type === "password"
+                        ? showPassword
+                          ? "text"
+                          : "password"
+                        : element.type
+                    }
                     id={element.name}
                   />
+                  {element.type === "password" && (
+                    <span
+                      className={styles.passwordHid}
+                      onClick={() => setShowPassword(!showPassword)}
+                    >
+                      {!showPassword ? <VscEye /> : <VscEyeClosed />}
+                    </span>
+                  )}
                   {showError && (
                     <p className={styles.error}>
                       {formik.errors[element.name as keyof IFormLogin]}
@@ -66,7 +84,7 @@ const Login = () => {
                 </div>
               ))}
             </div>
-            <p style={{ color: "red" }}>{error}</p>
+            <p className={styles.errorMessage2}>{error}</p>
             <div className={styles.btnContainer}>
               <Link href={"/"} className={styles.closeBtn}>
                 Close

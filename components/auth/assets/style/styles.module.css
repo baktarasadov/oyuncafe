@@ -46,6 +46,7 @@
   width: 234px;
   position: relative;
 }
+
 .password {
   position: absolute;
   top: 8px;
@@ -57,8 +58,14 @@
   display: flex;
   flex-direction: column;
   width: 133px;
+  position: relative;
 }
-
+.passwordHid {
+  position: absolute;
+  top: 38px;
+  right: 2px;
+  font-size: 18px;
+}
 .inputGroup label {
   font-size: 13px;
   font-style: normal;
@@ -219,8 +226,18 @@
   font-weight: 600;
 }
 
-.errorMessage {
+.form {
+  position: relative;
+}
+.errorMessage,
+.errorMessage2 {
   color: red;
   font-size: 12px;
   margin-top: 10px;
+}
+
+.errorMessage2 {
+  position: absolute;
+  bottom: 50px;
+  left: 28px;
 }
