@@ -12,13 +12,6 @@
   justify-content: space-between;
 }
 
-.radio {
-  background-color: #D3841F;
-  height: 20px;
-  border-radius: 5px;
-  width: 124px;
-}
-
 .onlineUsersHead h3 {
   font-size: 12px;
   font-weight: 700;
