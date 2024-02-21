@@ -6,11 +6,11 @@
 .userImgCon {
   width: 75px;
   height: 75px;
+  color: hsl(240, 20%, 24%);
+  padding: 3px;
   background: linear-gradient(#d9d9d9 ,
   #ffd148 ,
   #fae9b8 ) border-box;
-  color: hsl(240, 20%, 24%);
-  padding: 3px;
   border: 5px solid transparent;
   border-radius: 15px;
   display: inline-block;
@@ -128,5 +128,22 @@
   .userInfo {
     gap: 20px;
     background: linear-gradient(to bottom, #1062cd 0%, #5fbffa 100%);
+  }
+}
+
+@media (max-width: 820px)  {
+  .userImgCon {
+    width: 60px;
+    height: 60px;
+  }
+  .userInfo {
+    gap: 12px;
+    padding: 4px 18px;
+  }
+  .userInfoLeft {
+    gap: 6px;
+  }
+  .coinBox {
+    height: 22px;
   }
 }
