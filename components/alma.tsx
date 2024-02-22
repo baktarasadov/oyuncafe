@@ -20,8 +20,8 @@ const Alma = () => {
   // };
   return (
     <div>
-      <button onClick={handle}>click me</button>
-      <p style={{ color: "red" }}>{process.env.IP_URL}</p>
+      {/* <button onClick={handle}>click me</button>
+      <p style={{ color: "red" }}>{process.env.IP_URL}</p> */}
     </div>
   );
 };
