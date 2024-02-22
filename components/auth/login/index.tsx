@@ -13,6 +13,7 @@ import { loginInputs } from "@/constants/auth/login";
 import useFormValidation from "@/hoc/useFormValidation";
 import useAuth from "@/hoc/auth/useAuth";
 import { VscEye, VscEyeClosed } from "react-icons/vsc";
+import Loading from "@/components/share/loading";
 const Login = () => {
   const { loading, setError, error, onSubmit } = useAuth("/Auth/login");
   const [showPassword, setShowPassword] = useState<boolean>(false);
@@ -31,7 +32,7 @@ const Login = () => {
   if (loading) {
     return (
       <>
-        <div style={{ color: "white", fontSize: "30px" }}>Loading...</div>
+        <Loading />
       </>
     );
   }

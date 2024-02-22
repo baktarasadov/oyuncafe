@@ -1,0 +1,43 @@
+.image {
+  width: 224px;
+  height: 182px;
+  margin-top: 50px;
+}
+
+.loadingText {
+  color: yellow;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-top: 50px;
+}
+
+.loading {
+  margin-top: 3px;
+  height: 30px;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  border: 1px solid #000000;
+  background: #000000;
+  border-radius: 40px;
+  box-shadow: -1px -1px 5px 5px #00000040 inset;
+}
+
+.inner {
+  background: linear-gradient(180deg, #1b8ee0 0%, #076aaa 100%);
+  border: 1px solid #000000;
+  box-shadow: -1px -1px 5px 5px #00000040 inset;
+  width: 0; /* Başlangıçta inner elementinin genişliği 0 */
+  height: 100%;
+  border-radius: 40px;
+  animation: expandWidth 3.5s forwards; /* Genişlik değişiklikleri için 3 saniyelik bir animasyon */
+}
+
+@keyframes expandWidth {
+  0% {
+    width: 0; /* 0% noktasında genişlik 0 */
+  }
+  100% {
+    width: 100%; /* 100% noktasında genişlik 100% */
+  }
+}

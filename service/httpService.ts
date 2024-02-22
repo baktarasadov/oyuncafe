@@ -44,12 +44,12 @@ export const postAuth = async <T>(url: string, data: IPostAuthBody): Promise<IRe
             return { data: response.data.content, statusCode: response.status };
         }
 
-        console.log(response);
+        console.log(response.data.errorMessage);
 
         return { error: response.data.errorMessage.join(""), statusCode: response.status };
     } catch (error: any) {
-        console.log(error);
-        return { error: error.message }
+        console.log(error.response.data.errorMessage);
+        return { error: error.response.data.errorMessage.join("") };
     }
 };
 

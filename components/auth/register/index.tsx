@@ -15,6 +15,7 @@ import useFormValidation from "@/hoc/useFormValidation";
 import { getToken, postAuth } from "@/service/httpService";
 import { useRouter } from "next/navigation";
 import useAuth from "@/hoc/auth/useAuth";
+import Loading from "@/components/share/loading";
 const Register = () => {
   const [selectedOption, setSelectedOption] = useState<string>("male");
   const [showPassword, setShowPassword] = useState<boolean>(false);
@@ -36,7 +37,7 @@ const Register = () => {
   if (loading) {
     return (
       <>
-        <div style={{ color: "white", fontSize: "30px" }}>Loading...</div>
+        <Loading />
       </>
     );
   }

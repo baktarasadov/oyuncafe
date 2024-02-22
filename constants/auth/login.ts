@@ -3,7 +3,7 @@ import IAuthInputList from "@/types/auth/IAuth";
 export const loginInputs: IAuthInputList[] = [
     {
         name: "username",
-        placeholder: "username",
+        placeholder: "Username",
         type: "text",
         label: "Username",
     },
