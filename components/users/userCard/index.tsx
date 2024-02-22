@@ -1,7 +1,5 @@
 import React, { memo } from "react";
 import styles from "./assets/style/styles.module.css";
-import { santepheapFont } from "@/utils/font";
-import { IPlayerCard } from "@/types/home/IPlayer";
 import Image from "next/image";
 import RandomImg from "./assets/images/joker.jpg";
 import starIcon from "./assets/icon/star.svg";
