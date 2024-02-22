@@ -1,5 +1,6 @@
-import IPlayerCard from "./IPlayer";
 
 export interface ICarousel {
     playerList: any[]
 }
+
+//test
