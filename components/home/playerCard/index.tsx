@@ -1,7 +1,6 @@
 import React, { memo } from "react";
 import styles from "../assets/style/styles.module.css";
 import { santepheapFont } from "@/utils/font";
-import IPlayerCard from "@/types/home/IPlayer";
 type test = {
   id: number;
   name: string;
