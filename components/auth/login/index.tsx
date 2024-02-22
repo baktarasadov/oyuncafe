@@ -5,7 +5,6 @@ import { useFormik } from "formik";
 import React, { memo, useState } from "react";
 import styles from "../assets/style/styles.module.css";
 import { nunitoFont } from "@/utils/font";
-import { IoClose } from "react-icons/io5";
 import Button from "@/components/UI/button";
 import Link from "next/link";
 import { loginSchema } from "@/schema/login";
