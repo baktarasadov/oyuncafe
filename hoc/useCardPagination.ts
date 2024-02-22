@@ -1,7 +1,6 @@
-import { IPlayerCard } from '@/types/home/IPlayer';
 import { useState } from 'react';
 
-const useCardPagination = (initialStartIndex: number, maxVisibleCards: number, playerList: IPlayerCard[]) => {
+const useCardPagination = (initialStartIndex: number, maxVisibleCards: number, playerList: any[]) => {
     const [currentStartIndex, setCurrentStartIndex] = useState<number>(initialStartIndex);
 
     const handleLeftClick = (): void => {
@@ -14,7 +13,7 @@ const useCardPagination = (initialStartIndex: number, maxVisibleCards: number, p
         );
     };
 
-    const visibleCards: IPlayerCard[] = playerList.slice(
+    const visibleCards: any[] = playerList.slice(
         currentStartIndex,
         currentStartIndex + maxVisibleCards
     );
