@@ -2,7 +2,12 @@ import React, { memo } from "react";
 import styles from "../assets/style/styles.module.css";
 import { santepheapFont } from "@/utils/font";
 import IPlayerCard from "@/types/home/IPlayer";
-const HomePlayerCard: React.FC<IPlayerCard> = ({ id, name, score }) => {
+type test = {
+  id: number;
+  name: string;
+  score: string;
+};
+const HomePlayerCard: React.FC<test> = ({ id, name, score }) => {
   return (
     <>
       <div className={`${styles.player} ${santepheapFont.className}`}>
