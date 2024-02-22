@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import styles from "../assets/style/styles.module.css";
 import { santepheapFont } from "@/utils/font";
-import { IPlayerCard } from "@/types/home/IPlayer";
+import { IPlayerCard } from "../../../types/home/IPlayer";
 const HomePlayerCard: React.FC<IPlayerCard> = ({ id, name, score }) => {
   return (
     <>
