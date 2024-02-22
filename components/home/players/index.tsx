@@ -3,9 +3,8 @@ import HomeCarousel from "@/components/home/carousel";
 import React, { memo } from "react";
 import styles from "../assets/style/styles.module.css";
 import { nunitoFont } from "@/utils/font";
-import { IPlayerCard } from "@/types/home/IPlayer";
 const HomePlayers = () => {
-  const list: IPlayerCard[] = [
+  const list: any = [
     {
       id: 1,
       name: "Baktar asad",
