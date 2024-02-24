@@ -22,7 +22,7 @@ const Header = () => {
           <UserCard />
 
           <div className={styles.headerRight}>
-            <div className={styles.serachCon}>
+            <div className={styles.searchCon}>
               <Input
                 // value={""}
                 onChange={(e) => {}}

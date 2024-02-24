@@ -7,6 +7,11 @@ import closeChatIcon from "../assets/icons/close-chat-icon.svg";
 import sendIcon from "../assets/icons/send-icon.svg";
 import textStyleIcon from "../assets/icons/text-style.svg";
 import paletteIcon from "../assets/icons/palette.svg";
+import smileIcon from "../assets/images/smiley-icon 1.png";
+import teaIcon from "../assets/images/cay.png";
+import docsIcon from "../assets/images/Documents 1.png";
+import microphoneIcon from "../assets/images/microphone 1.png";
+
 import Input from "@/components/UI/input";
 
 const SalonChat = () => {
@@ -32,26 +37,39 @@ const SalonChat = () => {
       <div className={styles.salonChatBody}></div>
 
       <div className={styles.salonChatBottom}>
-        <div className="messageInput">
-          <div className="textStyle">
-            <Image
-              src={textStyleIcon}
-              className={styles.textStyleIcon}
-              alt="text style"
-            />
-            <Image
-              src={paletteIcon}
-              className={styles.paletteIcon}
-              alt="palette"
+        <div className={styles.messageInputCon}>
+          <div className={styles.messageInputLeft}>
+            <div className={styles.typography}>
+              <Image
+                src={textStyleIcon}
+                className={styles.textStyleIcon}
+                alt="text style"
+              />
+              <Image
+                src={paletteIcon}
+                className={styles.paletteIcon}
+                alt="palette"
+              />
+            </div>
+
+            <Input
+              className={styles.messageInput}
+              placeholder="Sohbet etmek için tıklayınız."
+              type="text"
             />
           </div>
 
-          <Input placeholder="Sohbet etmek için tıklayınız." type="text" />
+          <div className={styles.messageInputRight}>
+            <Image src={smileIcon} alt="icon" />
+            <Image src={teaIcon} alt="icon" />
+            <Image src={docsIcon} alt="icon" />
+            <Image src={microphoneIcon} alt="icon" />
+          </div>
 
-          <div className="messageType"></div>
+          <div className={styles.messageType}></div>
         </div>
 
-        <Button className={styles.cleanBtn}>
+        <Button className={styles.sendBtn}>
           Gönder
           <Image src={sendIcon} className={styles.sendIcon} alt="send icon" />
         </Button>

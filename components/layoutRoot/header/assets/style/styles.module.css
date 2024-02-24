@@ -5,38 +5,46 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 13px;
+  padding-top: 11px;
 }
 
 .headerRight {
   display: flex;
   align-items: flex-end;
-  gap: 20px;
+  gap: 5px;
 }
 
-.serachCon input {
+.searchCon {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.searchCon input {
   font-weight: 700;
-  font-size: 14px;
-  padding: 8px 12px;
+  font-size: 10px;
+  padding: 5px 14px;
   color: #000;
-  border-radius: 10px;
+  border-radius: 5px;
   border: none;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  width: 223px;
 }
 
 .searchButton {
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   background-color: #2b89bc;
-  border-radius: 8px;
-  padding: 6px 12px;
+  padding: 4px 5px;
   color: #fff;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 700;
   border: none;
-  margin-left: 10px;
+  margin-left: 5px;
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
 }
 .searchButton:hover {
   background-color: #53b0e2;
@@ -44,7 +52,7 @@
 
 .navLinks {
   display: flex;
-  gap: 20px;
+  gap: 5px;
 }
 .navLink {
   display: flex;
@@ -52,8 +60,9 @@
   justify-content: center;
   width: auto;
   position: relative;
-  padding: 5px 10px;
-  transition: .3s;
+  width: 30px;
+  height: 27px;
+  transition: 0.3s;
 }
 .navLink::after {
   content: "";
@@ -61,7 +70,8 @@
   width: 100%;
   height: 100%;
   background-color: #1b8ee0;
-  border-radius: 10px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
   top: 0;
   left: 0;
 }
@@ -71,8 +81,8 @@
   width: 100%;
   height: 100%;
   background-color: #054ee8;
-  border-radius: 10px;
-  top: 5px;
+  border-radius: 5px;
+  top: 3px;
   left: 0;
   box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -83,26 +93,25 @@
 .navIcon {
   position: relative;
   z-index: 1;
-  width: 30px;
-  height: 30px;
+  /* width: 30px;
+  height: 30px; */
 }
 
 .shopCartIcon {
   position: relative;
   z-index: 1;
-  width: 60px;
-  height: 30px;
+  width: 48px;
+  height: 27px;
 }
 
 @media (max-width: 1280px) {
-  .navLinks {
+  /* .navLinks {
     gap: 10px;
-  }
-  .headerRight {
+  } */
+  /* .headerRight {
     gap: 10px;
-  }
+  } */
 }
-
 
 @media (max-width: 1160px) {
   .headerContainer {
@@ -110,18 +119,17 @@
   }
   .headerRight {
     flex-direction: column-reverse;
-    gap: 20px;
+    /* gap: 20px; */
   }
 }
 
 @media (max-width: 820px) {
-  .navIcon {
+  /* .navIcon {
     width: 25px;
     height: 25px;
   }
   .shopCartIcon {
     width: 45px;
     height: 25px;
-  }
-  
+  } */
 }

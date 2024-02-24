@@ -1,60 +1,123 @@
 .salonChat {
-  border-radius: 45px 45px 0 0;
   overflow: hidden;
   position: relative;
 }
 .salonChatHead {
-  background: #134967;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 28px;
+  padding: 5px 20px;
+  border-radius: 15px 15px 0px 0px;
+  background: linear-gradient(
+    0deg,
+    rgb(20, 75, 104) 50%,
+    rgb(45, 120, 141) 271.875%
+  );
 }
 .salonChatHead h3 {
-  font-size: 16px;
+  font-size: 10px;
   font-weight: 700;
   color: #fff;
 }
 .salonHeadControl {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 6px;
 }
 .cleanBtn {
-  font-size: 16px;
+  font-size: 10px;
   font-weight: 700;
   color: #fff;
-  background: linear-gradient(to bottom, #2B89BC 100%, #fff -90%);
-  box-shadow: 1px 10px 7px rgba(0, 0, 0, 0.25);
-  border-radius: 30px;
-  padding: 3px 12px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+    inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background: rgb(43, 137, 188);
+  padding: 1px 12px;
   display: flex;
   align-items: center;
   gap: 3px;
 }
 
-.zoomIcon, .closeChatIcon, .sendIcon {
-  width: 20px;
-  height: 20px;
+.zoomIcon,
+.closeChatIcon,
+.sendIcon {
+  /* width: 20px;
+  height: 20px; */
 }
 
-
 .salonChatBody {
-  padding: 10px 28px;
+  padding: 2px 20px;
   overflow: scroll;
   height: 100%;
-  position: relative;
   background-color: #fff;
-  height: 100px;
-  border-left: 10px solid #134967;
-  border-right: 10px solid #134967;
+  height: 90px;
+  border-left: 5px solid #134967;
+  border-right: 5px solid #134967;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  position: relative;
 }
 
 .salonChatBottom {
-  position: sticky;
+  position: absolute;
+  width: 100%;
   left: 0;
-  bottom: 0;
-  border: 10px solid #134967;
-  border-radius: 45px 45px 0 0;
+  bottom: 22px;
   display: flex;
+  background: rgb(20, 73, 103);
+  border-left: 2px solid rgb(20, 73, 103);
+  border-right: 2px solid rgb(20, 73, 103);
+  padding: 2px;
+}
+
+.messageInputCon {
+  border-radius: 5px 5px 5px 0px;
+  background: rgb(255, 255, 255);
+  padding: 4px 12px 4px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.messageInputLeft {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.typography {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.messageInput {
+  font-size: 8px;
+  font-weight: 700;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+}
+.messageInput::placeholder {
+  color: #76726f;
+}
+
+.sendBtn {
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+    inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background: rgb(43, 137, 188);
+  padding: 1px 13px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-right: 20px;
+  margin-left: 5px;
+}
+
+.messageInputRight {
+  display: flex;
+  align-items: center;
+  gap: 3px;
 }
