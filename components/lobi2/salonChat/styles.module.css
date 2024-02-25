@@ -47,6 +47,7 @@
 
 .salonChatBody {
   padding: 2px 20px;
+  padding-bottom: 30px;
   overflow: scroll;
   height: 100%;
   background-color: #fff;
@@ -56,10 +57,13 @@
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
     0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
 
 .salonChatBottom {
-  position: absolute;
+  position: sticky;
   width: 100%;
   left: 0;
   bottom: 22px;
@@ -120,4 +124,26 @@
   display: flex;
   align-items: center;
   gap: 3px;
+}
+
+.joinedUser {
+  border-radius: 2px;
+  background: rgb(226, 226, 226);
+  padding: 1px 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+  position: relative;
+}
+.joinedUser img {
+  position: absolute;
+  left: 3px;
+}
+.joinedUser p {
+  font-size: 8px;
+}
+
+.joinedUser p span {
+  font-weight: 700;
 }

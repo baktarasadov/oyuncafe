@@ -11,8 +11,10 @@ import smileIcon from "../assets/images/smiley-icon 1.png";
 import teaIcon from "../assets/images/cay.png";
 import docsIcon from "../assets/images/Documents 1.png";
 import microphoneIcon from "../assets/images/microphone 1.png";
+import joinedUserIcon from "../assets/icons/joined-user-icon.svg";
 
 import Input from "@/components/UI/input";
+import UserMessage from "../userMessage";
 
 const SalonChat = () => {
   return (
@@ -34,7 +36,16 @@ const SalonChat = () => {
         </div>
       </div>
 
-      <div className={styles.salonChatBody}></div>
+      <div className={styles.salonChatBody}>
+        <UserMessage />
+
+        <div className={styles.joinedUser}>
+          <Image src={joinedUserIcon} alt="joined user" />
+          <p>
+            <span>Kemal</span> odaya katıldı
+          </p>
+        </div>
+      </div>
 
       <div className={styles.salonChatBottom}>
         <div className={styles.messageInputCon}>
