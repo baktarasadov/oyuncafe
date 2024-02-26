@@ -1,6 +1,7 @@
+import { IPlayerCard } from "./IPlayerCard";
 
 export interface ICarousel {
-    playerList: any[]
+    playerList: IPlayerCard[]
 }
 
 //test
