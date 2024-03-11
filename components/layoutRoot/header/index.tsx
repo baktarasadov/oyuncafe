@@ -11,6 +11,19 @@ import settingsIcon from "./assets/icon/settingsIcon.svg";
 import shoppingCartIcon from "./assets/icon/shoppingCartIcon.svg";
 import Link from "next/link";
 import Image from "next/image";
+
+const icons = [
+  { icon: plusIcon, alt: "Plus Icon", className: styles.navIcon },
+  { icon: giftIcon, alt: "Gift Icon", className: styles.navIcon },
+  { icon: plusIcon, alt: "Plus Icon", className: styles.navIcon },
+  { icon: peopleIcon, alt: "People Icon", className: styles.navIcon },
+  { icon: settingsIcon, alt: "Settings Icon", className: styles.navIcon },
+  {
+    icon: shoppingCartIcon,
+    alt: "Shopping Cart Icon",
+    className: styles.shopCartIcon,
+  },
+];
 const Header = () => {
   const handleButtonClick = (): void => {
     console.log("test");
@@ -39,60 +52,13 @@ const Header = () => {
 
             <nav>
               <ul className={styles.navLinks}>
-                <li>
-                  <Link className={styles.navLink} href="/">
-                    <Image
-                      src={plusIcon}
-                      alt="user image"
-                      className={styles.navIcon}
-                    />
-                  </Link>
-                </li>
-                <li>
-                  <Link className={styles.navLink} href="/">
-                    <Image
-                      src={giftIcon}
-                      alt="user image"
-                      className={styles.navIcon}
-                    />
-                  </Link>
-                </li>
-                <li>
-                  <Link className={styles.navLink} href="/">
-                    <Image
-                      src={plusIcon}
-                      alt="user image"
-                      className={styles.navIcon}
-                    />
-                  </Link>
-                </li>
-                <li>
-                  <Link className={styles.navLink} href="/">
-                    <Image
-                      src={peopleIcon}
-                      alt="user image"
-                      className={styles.navIcon}
-                    />
-                  </Link>
-                </li>
-                <li>
-                  <Link className={styles.navLink} href="/">
-                    <Image
-                      src={settingsIcon}
-                      alt="user image"
-                      className={styles.navIcon}
-                    />
-                  </Link>
-                </li>
-                <li>
-                  <Link className={styles.navLink} href="/">
-                    <Image
-                      src={shoppingCartIcon}
-                      alt="user image"
-                      className={styles.shopCartIcon}
-                    />
-                  </Link>
-                </li>
+                {icons.map(({ icon, alt, className }, index) => (
+                  <li key={index}>
+                    <Link className={styles.navLink} href="/">
+                      <Image src={icon} alt={alt} className={className} />
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </nav>
           </div>

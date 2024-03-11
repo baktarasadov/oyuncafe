@@ -1,6 +1,3 @@
-.header {
-}
-
 .headerContainer {
   display: flex;
   justify-content: space-between;
@@ -21,12 +18,12 @@
   justify-content: flex-end;
 }
 .searchCon input {
+  border: 3px solid #2b89bc;
   font-weight: 700;
   font-size: 10px;
-  padding: 5px 14px;
+  padding: 6px 14px;
   color: #000;
-  border-radius: 5px;
-  border: none;
+  border-radius: 10px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -37,9 +34,9 @@
   border-radius: 5px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   background-color: #2b89bc;
-  padding: 4px 5px;
+  padding: 6px 14px;
   color: #fff;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   border: none;
   margin-left: 5px;

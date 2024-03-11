@@ -1,0 +1,137 @@
+.container {
+  width: 174px;
+  height: 215px;
+  border: 1px solid red;
+  color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mt-20 {
+  margin-top: 20px;
+}
+.imageContainer {
+  position: relative;
+  height: 101px;
+  width: 146px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-top: 5px;
+  background-color: #4f46e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image {
+  height: 101px;
+  width: 146px;
+
+  object-fit: cover; /* Resmin boyutunu korumak 
+  için eklenmiştir */
+}
+.ımageContent1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 1px;
+  margin: auto;
+  border-radius: 5px, 5px, 0px, 0px;
+  width: 135px;
+  height: 16px;
+  background: rgba(212, 0, 42, 1);
+  text-align: center;
+
+  font-size: 10px;
+}
+
+.ımageContent2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 1px;
+  margin: auto;
+  border-radius: 5px, 5px, 0px, 0px;
+  width: 135px;
+  height: 16px;
+  background: rgba(212, 0, 42, 1);
+  text-align: center;
+
+  font-size: 10px;
+}
+
+.mainLiving {
+  display: flex;
+  justify-content: center;
+  margin-top: -20px;
+}
+.headLiving {
+  font-size: 13px;
+  margin: auto;
+  font-weight: bold;
+  margin-left: 8px;
+}
+.headGameName {
+  font-size: 23px;
+  font-weight: bold;
+
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.headEntryGame {
+  position: relative;
+  cursor: pointer;
+  top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #f45a5d 0%, #ffff00 258.11%);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 146px;
+  height: 37px;
+  border-radius: 5px;
+  color: white;
+}
+
+.headEntryGamePrice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 1024px) {
+  .headEntryGame {
+    width: 109px;
+  }
+  .headEntryGameMinEntry {
+    text-align: center;
+    font-size: 10px;
+  }
+
+  .headEntryGamePrice > span {
+    text-align: center;
+    font-size: 12px;
+  }
+  .headLiving {
+    text-align: center;
+    font-size: 10px;
+    margin-left: 0;
+  }
+  .ımageContent1 {
+    width: 100px;
+  }
+  .ımageContent2 {
+    width: 100px;
+  }
+  .headGameName {
+    font-size: 21px;
+    text-align: center;
+  }
+}

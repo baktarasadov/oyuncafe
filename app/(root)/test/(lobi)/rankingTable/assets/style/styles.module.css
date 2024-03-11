@@ -1,0 +1,91 @@
+/* styles.module.css */
+.rankingTable {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(9, 75, 161, 1);
+
+  z-index: 999;
+}
+
+.centeredContainer {
+  display: flex;
+  width: 504px;
+  height: 263px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+.containerLeft {
+  flex: 1;
+  height: 100%;
+  width: 50px;
+  border: 1px solid blue;
+}
+
+.leftHeader {
+  height: 25px;
+  background: rgba(222, 54, 45, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.leftHeader > h2 {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #fff;
+}
+.scoreImgContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.allImage {
+  width: 100px;
+  height: 100px;
+}
+.allImageRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.scoreImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.scoreCupContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4px;
+}
+.scoreCupContent > img {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+}
+.scoreCupContent > span {
+  font-size: 11px;
+  color: rgb(255, 255, 0);
+}
+.scoreCup {
+  margin-right: 5px;
+}
+.userInfo {
+  margin-top: -10px;
+  display: flex;
+  flex-direction: column;
+}
+.userName {
+  font-size: 10px;
+  color: #fff;
+}
+.containerRight {
+  flex: 2;
+  height: 100%;
+  width: 50px;
+  border: 1px solid rgb(133, 166, 32);
+}

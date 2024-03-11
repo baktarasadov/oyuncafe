@@ -1,0 +1,22 @@
+.mainContainer {
+  position: relative;
+  height: 55vh;
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.slider {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mt-20 {
+  margin-top: 20px;
+}
+.swiperbuttonnext,
+.swiperbuttonprev {
+  color: white !important;
+  font-weight: bold;
+}
