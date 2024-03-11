@@ -1,0 +1,88 @@
+.radio {
+  background-color: #d3841f;
+  height: 45px;
+  border-radius: 5px;
+  width: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2px 3px;
+}
+.radioButtons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.radioButton {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #261d18;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.radioButton:hover {
+  background-color: #6b4733;
+}
+.radioFm {
+  border-radius: 5px;
+  background-color: #261d18;
+  padding-top: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.radioFm p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+  .radio {
+    background-color: #d3841f;
+    height: 20px;
+    border-radius: 5px;
+    width: 124px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 3px;
+  }
+  .radioButtons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .radioButton {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #261d18;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .radioButton:hover {
+    background-color: #6b4733;
+  }
+  .radioFm {
+    border-radius: 5px;
+    background-color: #261d18;
+    padding-top: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .radioFm p {
+    font-size: 8px;
+    font-weight: 400;
+    color: #fff;
+  }
+}
+/* asdasd */

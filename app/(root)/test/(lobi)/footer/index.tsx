@@ -4,7 +4,7 @@ import okeyIcon from "./assets/icons/okey.png";
 import Image from "next/image";
 import invateIcon from "./assets/icons/team.png";
 import Coin from "./assets/icons/coin.png";
-import Radio from "@/components/lobi2/radio";
+import Radio from "@/components/share/radio";
 const LobiFooter: React.FC = () => {
   return (
     <div className={`${styles.mainContainer}`}>
