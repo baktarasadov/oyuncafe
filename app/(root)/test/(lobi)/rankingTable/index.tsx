@@ -4,7 +4,9 @@ import skoreImage from "./assets/icons/skoreimg.png";
 import skoreImage2 from "./assets/icons/skoreimg2.png";
 import skoreImage3 from "./assets/icons/skoreimg3.png";
 import cup from "./assets/icons/cup.png";
+
 import Image from "next/image";
+import TableScore from "./tables";
 const RankingTable = () => {
   return (
     <div className={styles.rankingTable}>
@@ -14,7 +16,7 @@ const RankingTable = () => {
             <h2>en iyi ilk 3 oyuncu</h2>
           </div>
           <div className={styles.scoreImgContainer}>
-            <div className={styles.allImage}>
+            <div className={`${styles.allImage} ${styles.backgroundImage}`}>
               <Image
                 className={styles.scoreImg}
                 src={skoreImage}
@@ -60,7 +62,9 @@ const RankingTable = () => {
             </div>
           </div>
         </div>
-        <div className={styles.containerRight}>right</div>
+        <div className={styles.containerRight}>
+          <TableScore />
+        </div>
       </div>
     </div>
   );

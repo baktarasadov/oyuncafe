@@ -25,13 +25,17 @@ const TestCarousel: React.FunctionComponent = () => {
           1024: {
             slidesPerView: 5,
           },
-          // Ekran 768 pikselden genişse, 3 slider göster
+          // Ekran 768 pikselden genişse, 4 slider göster
           768: {
             slidesPerView: 4,
           },
-          // Diğer durumlarda, 1 slider göster
-          0: {
+          587: {
             slidesPerView: 3,
+          },
+          // Diğer durumlarda, 3 slider göster
+
+          0: {
+            slidesPerView: 2,
           },
         }}
         navigation={{

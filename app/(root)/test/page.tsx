@@ -12,7 +12,7 @@ const page = () => {
       <Carousel />
 
       <LobiFooter />
-      {/* <RankingTable /> */}
+      <RankingTable />
     </div>
   );
 };
