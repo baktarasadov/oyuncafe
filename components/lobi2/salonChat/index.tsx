@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect, useRef } from "react";
+
 import styles from "./styles.module.css";
 import Image from "next/image";
 import Button from "@/components/UI/button";
@@ -17,8 +19,29 @@ import Input from "@/components/UI/input";
 import UserMessage from "../userMessage";
 
 const SalonChat = () => {
+  const [showAdditionalElements, setShowAdditionalElements] = useState(false);
+  const salonChatRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      salonChatRef.current &&
+      !salonChatRef.current.contains(event.target as Node)
+    ) {
+      setShowAdditionalElements(false);
+    }
+  };
+
+  const handleInputClick = () => {
+    setShowAdditionalElements(true);
+  };
   return (
-    <div className={styles.salonChat}>
+    <div className={styles.salonChat} ref={salonChatRef}>
       <div className={styles.salonChatHead}>
         <h3>Salon Sohbeti</h3>
 
@@ -32,22 +55,25 @@ const SalonChat = () => {
             src={closeChatIcon}
             className={styles.closeChatIcon}
             alt="close chat icon"
+            onClick={() => setShowAdditionalElements(false)}
           />
         </div>
       </div>
 
-      <div className={styles.salonChatBody}>
-        <UserMessage />
+      {showAdditionalElements && (
+        <div className={styles.salonChatBody}>
+          <UserMessage />
 
-        <div className={styles.joinedUser}>
-          <Image src={joinedUserIcon} alt="joined user" />
-          <p>
-            <span>Kemal</span> odaya katıldı
-          </p>
+          <div className={styles.joinedUser}>
+            <Image src={joinedUserIcon} alt="joined user" />
+            <p>
+              <span>Kemal</span> odaya katıldı
+            </p>
+          </div>
         </div>
-      </div>
+      )}
 
-      <div className={styles.salonChatBottom}>
+      <div className={styles.salonChatBottom} onClick={handleInputClick}>
         <div className={styles.messageInputCon}>
           <div className={styles.messageInputLeft}>
             <div className={styles.typography}>

@@ -3,6 +3,7 @@
   position: relative;
 }
 .salonChatHead {
+  height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -66,7 +67,8 @@
   position: sticky;
   width: 100%;
   left: 0;
-  bottom: 22px;
+  height: 30px;
+  bottom: 13px;
   display: flex;
   background: rgb(20, 73, 103);
   border-left: 2px solid rgb(20, 73, 103);
@@ -146,4 +148,16 @@
 
 .joinedUser p span {
   font-weight: 700;
+}
+@media (max-width: 1250px) {
+  .salonChatBody {
+    height: 45px;
+  }
+  .salonChatHead {
+    padding: 5px 10px;
+    height: 37px;
+  }
+  .salonChatBottom {
+    height: 20px;
+  }
 }
