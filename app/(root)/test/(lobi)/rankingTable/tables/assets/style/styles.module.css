@@ -57,24 +57,7 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgb(21, 105, 215);
-    margin: auto;
-    height: 100%;
-    flex-direction: column;
-    margin-top: 10px; /* Tab container'ın altında bir boşluk bırakmak için */
-  }
-
   .tabContainer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 100%;
     height: 25px;
     padding: 5px;
   }
@@ -87,20 +70,11 @@
   }
 
   .button {
-    border-radius: 5px;
     height: 20px;
     width: 71px;
 
-    cursor: pointer;
-    color: #fff;
-    background-color: #393535d2;
     margin-right: 6px;
     font-size: 7px;
-    transform: skewX(-10deg);
-  }
-
-  .button.activeTab {
-    background-color: #d38912;
   }
 
   .tabContent {
@@ -108,13 +82,7 @@
   }
 
   .tabContent.active {
-    position: relative;
-    display: flex;
-    justify-content: center;
     width: 100%;
     max-height: 212px;
-    overflow-y: auto;
   }
-
-  /* table*/
 }

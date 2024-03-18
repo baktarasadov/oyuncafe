@@ -80,13 +80,10 @@
 
 @media screen and (max-width: 1024px) {
   .customers {
-    position: relative;
-    font-family: Arial, Helvetica, sans-serif;
     margin: 0 4px 10px 2px;
-    border-collapse: collapse;
+
     width: 100%;
     height: 100%;
-    overflow-y: auto;
   }
 
   .customers td,
@@ -95,10 +92,8 @@
   }
 
   .customers tr {
-    background: rgba(9, 75, 161, 1);
-    color: white;
     font-size: 9px;
-    text-align: left;
+
     border: 5px solid rgb(15, 46, 86);
     height: 28px;
   }
@@ -110,20 +105,14 @@
   .customers th {
     padding-top: 12px;
     padding-bottom: 12px;
-    text-align: left;
+
     font-size: 13px;
-    color: white;
   }
   .userContent {
-    display: flex;
-    align-items: center;
     padding-top: 4px;
     padding-bottom: 7px;
   }
   .userImage {
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -134,8 +123,6 @@
     height: 20px;
     margin-right: 4px;
     margin-left: 4px;
-    background: linear-gradient(0deg, #0370ff, #0045a0);
-    color: white;
   }
 
   .levelImage {
@@ -154,7 +141,5 @@
   }
   .userScore {
     margin-left: 3px;
-    color: rgb(234, 234, 12);
-    font-weight: bold;
   }
 }
