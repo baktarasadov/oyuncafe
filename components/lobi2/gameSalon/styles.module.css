@@ -1,7 +1,7 @@
 .gameSalon {
   overflow: hidden;
   height: 100%;
-
+  width: 100%;
   border: 5px solid #2d7589;
   border-radius: 20px 20px 0 0;
 }
@@ -21,13 +21,12 @@
     rgb(45, 117, 137) 98.274%
   );
   padding: 3px 5px;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   color: #fff;
 }
 .gameSalonName span {
   color: #f5a91b;
-  margin-right: 6px;
 }
 
 .nowPlayBtn {
@@ -85,6 +84,7 @@
   padding: 0 20px;
   overflow: scroll;
   height: 100%;
+
   position: relative;
 }
 .gameSalonBody::-webkit-scrollbar {
@@ -121,9 +121,27 @@
 
 @media (max-width: 1250px) {
   .tableCardsCon {
-    grid-template-columns: 1fr;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
   .nowPlayBtn {
     font-size: 10px;
+  }
+  .tableCardsCon {
+    gap: 10px;
+  }
+}
+@media (max-width: 923px) {
+  .tableCardsCon {
+    gap: 3px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .nowPlayBtn {
+    font-size: 10px;
+  }
+  .tableCardsCon {
+    gap: 3px;
   }
 }

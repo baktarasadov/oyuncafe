@@ -29,3 +29,21 @@
   padding: 1px 14px;
   text-align: center;
 }
+
+@media (max-width: 1250px) {
+  .playerUsername {
+    font-size: 7px;
+    padding: 1px 5px;
+  }
+}
+@media (max-width: 923px) {
+  .playerUsername {
+    font-size: 6px;
+    padding: 1px 1px;
+  }
+  .playerImgSquare,
+  .playerImgCircle {
+    width: 16px;
+    height: 16px;
+  }
+}

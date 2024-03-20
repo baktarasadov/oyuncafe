@@ -106,3 +106,32 @@
   /* width: 20px;
   height: 20px; */
 }
+@media (max-width: 1250px) {
+  .tableCard {
+    width: 80%;
+    height: 80%;
+  }
+  .playersCon {
+    gap: 2px;
+
+    width: 100%;
+  }
+}
+
+@media (max-width: 923px) {
+  .tableCard {
+    width: 74%;
+    height: 65%;
+  }
+  .playersCon {
+    gap: 1px;
+
+    width: 100%;
+  }
+  .coinCard {
+    gap: 1px;
+    color: #fece75;
+    font-size: 7px;
+    padding: 1px 10px;
+  }
+}
