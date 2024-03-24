@@ -56,7 +56,7 @@
   overflow-y: auto;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .tabContainer {
     height: 25px;
     padding: 5px;

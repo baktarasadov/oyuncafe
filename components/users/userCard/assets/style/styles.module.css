@@ -4,8 +4,8 @@
 }
 
 .userImgCon {
-  width: 44px;
-  height: 44px;
+  width: 80px;
+  height: 80px;
   border-radius: 5px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   background: linear-gradient(#d9d9d9, #ffd148, #fae9b8) border-box;
@@ -23,23 +23,23 @@
 .userInfo {
   display: flex;
   justify-content: space-between;
-  gap: 18px;
+  gap: 28px;
   border-radius: 0px 40px 40px 0px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   background: linear-gradient(180deg, rgb(16, 98, 205), rgb(95, 191, 250) 100%);
-  padding: 3px 11px;
+  padding: 4px 24px;
 }
 
 .userInfoLeft {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  gap: 7px;
+  gap: 10px;
 }
 
 .username {
   font-weight: 700;
-  font-size: 8px;
+  font-size: 18px;
   color: #fff;
 }
 .userLevel {
@@ -48,18 +48,18 @@
   background-color: #222222;
   border: 1px solid #75c2ff;
   border-radius: 5px;
-  padding: 2px 18px;
+  padding: 4px 35px;
   position: relative;
 }
 .starIcon {
   position: absolute;
-  /* width: 20px;
-  height: 20px; */
+  width: 30px;
+  height: 30px;
   left: -5px;
 }
 .levelText {
   font-weight: 700;
-  font-size: 12px;
+  font-size: 15px;
   color: #fff;
 }
 .userInfoRight {
@@ -72,7 +72,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 6px;
+  gap: 16px;
   padding: 2px 2px 0 2px 2px;
   background: linear-gradient(
     to bottom,
@@ -82,21 +82,21 @@
     #0c7ac9
   );
   border-radius: 5px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);  
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .coinText {
   font-weight: 700;
-  font-size: 8px;
+  font-size: 18px;
   color: #fff;
 }
 .diamondIcon {
-  /* width: 14px;
-  height: 14px; */
-  margin-left: 3px;
+  width: 28px;
+  height: 28px;
+  margin-left: 6px;
 }
 .coinIcon {
-  /* width: 18px;
-  height: 18px; */
+  width: 36px;
+  height: 36px;
 }
 .plusButton {
   display: flex;
@@ -104,40 +104,71 @@
   justify-content: center;
   background-color: #72b0be;
   border-radius: 5px;
-  height: 12px;
-  width: 12px;
+  height: 24px;
+  width: 24px;
   border: none;
   cursor: pointer;
   transition: 0.3s;
 }
 .plusButton:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 .plusIcon {
   /* width: 14px;
   height: 14px; */
 }
 
-/* @media (max-width: 1280px) {
-  .userInfo {
-    gap: 20px;
-    background: linear-gradient(to bottom, #1062cd 0%, #5fbffa 100%);
-  }
-}
-
-@media (max-width: 820px) {
+@media (max-width: 1280px) {
   .userImgCon {
-    width: 60px;
-    height: 60px;
+    width: 44px;
+    height: 44px;
   }
   .userInfo {
-    gap: 12px;
-    padding: 4px 18px;
+    gap: 18px;
+    padding: 3px 11px;
   }
+
   .userInfoLeft {
-    gap: 6px;
+    gap: 7px;
+  }
+
+  .username {
+    font-size: 8px;
+  }
+  .userLevel {
+    padding: 2px 18px;
+  }
+  .starIcon {
+    width: 20px;
+    height: 20px;
+    left: -5px;
+  }
+  .levelText {
+    font-weight: 700;
+    font-size: 12px;
+  }
+  .userInfoRight {
+    display: flex;
+    gap: 5px;
   }
   .coinBox {
-    height: 22px;
+    gap: 6px;
+    padding: 2px 2px 0 2px 2px;
   }
-} */
+  .coinText {
+    font-size: 8px;
+  }
+  .diamondIcon {
+    width: 14px;
+    height: 14px;
+    margin-left: 3px;
+  }
+  .coinIcon {
+    width: 18px;
+    height: 18px;
+  }
+  .plusButton {
+    height: 12px;
+    width: 12px;
+  }
+}

@@ -1,6 +1,6 @@
 .gameSalon {
   overflow: hidden;
-  height: 100%;
+  height: 96%;
   width: 100%;
   border: 5px solid #2d7589;
   border-radius: 20px 20px 0 0;
@@ -130,6 +130,9 @@
   }
   .tableCardsCon {
     gap: 10px;
+  }
+  .gameSalon {
+    height: 100%;
   }
 }
 @media (max-width: 923px) {
