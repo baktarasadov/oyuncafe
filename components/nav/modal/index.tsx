@@ -1,5 +1,4 @@
 // Modal.js
-
 import React from "react";
 import styles from "../assets/style/styles.module.css";
 import userIcon from "./assets/users.png";

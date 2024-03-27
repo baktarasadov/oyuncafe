@@ -4,10 +4,10 @@ import skoreImage from "./assets/icons/skoreimg.png";
 import skoreImage2 from "./assets/icons/skoreimg2.png";
 import skoreImage3 from "./assets/icons/skoreimg3.png";
 import cup from "./assets/icons/cup.png";
-
+import { ModalProps } from "@/types/headerLobi/NavLink";
 import Image from "next/image";
 import TableScore from "./tables";
-const RankingTable = () => {
+const RankingTable = ({ closeModal }: ModalProps) => {
   return (
     <div className={styles.rankingTable}>
       <div className={styles.centeredContainer}>
@@ -63,7 +63,7 @@ const RankingTable = () => {
           </div>
         </div>
         <div className={styles.containerRight}>
-          <TableScore />
+          <TableScore closeModal={closeModal} />
         </div>
       </div>
     </div>

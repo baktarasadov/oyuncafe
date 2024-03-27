@@ -4,8 +4,11 @@ import React from "react";
 import styles from "./assets/style/styles.module.css";
 import Table from "../table";
 import { TableData } from "../data/data";
+import closeIcon from "./assets/icons/cross.png";
+import Image from "next/image";
+import { ModalProps } from "@/types/headerLobi/NavLink";
 
-const TableScore: React.FunctionComponent = () => {
+const TableScore = ({ closeModal }: ModalProps) => {
   const [activeTab, setActiveTab] = useState(0);
 
   const showTab = (tabIndex: number) => {
@@ -46,6 +49,15 @@ const TableScore: React.FunctionComponent = () => {
           >
             GÜNÜN İYİLERİ
           </button>
+
+          <Image
+            width={27}
+            height={27}
+            src={closeIcon}
+            alt="closeıcon"
+            onClick={closeModal}
+            className={styles.imgClose}
+          />
         </div>
 
         <div

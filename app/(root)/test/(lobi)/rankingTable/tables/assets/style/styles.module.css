@@ -55,6 +55,9 @@
   max-height: 480px;
   overflow-y: auto;
 }
+.imgClose {
+  cursor: pointer;
+}
 
 @media screen and (max-width: 1280px) {
   .tabContainer {

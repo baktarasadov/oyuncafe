@@ -1,5 +1,5 @@
 "use client";
-import React, { memo } from "react";
+import React, { memo, useState } from "react";
 import styles from "./assets/style/styles.module.css";
 import UserCard from "@/components/users/userCard";
 import Input from "@/components/UI/input";
@@ -8,23 +8,40 @@ import plusIcon from "./assets/icon/plusIcon.svg";
 import giftIcon from "./assets/icon/giftIcon.svg";
 import peopleIcon from "./assets/icon/peopleIcon.svg";
 import settingsIcon from "./assets/icon/settingsIcon.svg";
+import rankingIcon from "./assets/icon/ranking.svg";
 import shoppingCartIcon from "./assets/icon/shoppingCartIcon.svg";
 import Link from "next/link";
 import Image from "next/image";
-
-const icons = [
-  { icon: plusIcon, alt: "Plus Icon", className: styles.navIcon },
-  { icon: giftIcon, alt: "Gift Icon", className: styles.navIcon },
-  { icon: plusIcon, alt: "Plus Icon", className: styles.navIcon },
-  { icon: peopleIcon, alt: "People Icon", className: styles.navIcon },
-  { icon: settingsIcon, alt: "Settings Icon", className: styles.navIcon },
+import RankingTable from "@/app/(root)/test/(lobi)/rankingTable";
+import { Icon } from "@/types/headerLobi/NavLink";
+const icons: Icon[] = [
+  { icon: plusIcon, alt: "PlusIcon", className: styles.navIcon },
+  { icon: giftIcon, alt: "GiftIcon", className: styles.navIcon },
+  { icon: rankingIcon, alt: "RankIcon", className: styles.navIcon },
+  { icon: peopleIcon, alt: "PeopleIcon", className: styles.navIcon },
+  { icon: settingsIcon, alt: "SettingsIcon", className: styles.navIcon },
   {
     icon: shoppingCartIcon,
     alt: "Shopping Cart Icon",
     className: styles.shopCartIcon,
   },
 ];
-const Header = () => {
+const Header: React.FC = () => {
+  const [isRankingTable, setIsRankingTable] = useState<boolean>(false);
+
+  const openModal = () => {
+    setIsRankingTable(true);
+  };
+
+  const closeModal = () => {
+    setIsRankingTable(false);
+  };
+
+  const handleNavItemClick = (rankTable: string) => {
+    if (rankTable === "RankIcon") {
+      openModal();
+    }
+  };
   const handleButtonClick = (): void => {
     console.log("test");
   };
@@ -53,8 +70,8 @@ const Header = () => {
             <nav>
               <ul className={styles.navLinks}>
                 {icons.map(({ icon, alt, className }, index) => (
-                  <li key={index}>
-                    <Link className={styles.navLink} href="/">
+                  <li key={index} onClick={() => handleNavItemClick(alt)}>
+                    <Link className={styles.navLink} href="#">
                       <Image src={icon} alt={alt} className={className} />
                     </Link>
                   </li>
@@ -64,6 +81,7 @@ const Header = () => {
           </div>
         </div>
       </header>
+      {isRankingTable && <RankingTable closeModal={closeModal} />}
     </>
   );
 };

@@ -12,7 +12,6 @@ const page = () => {
       <Carousel />
 
       <LobiFooter />
-      <RankingTable />
     </div>
   );
 };

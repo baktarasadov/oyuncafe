@@ -22,7 +22,6 @@ const NavList = () => {
 
   const handleNavItemClick = (navItem: INavItem) => {
     if (navItem.title === "Reservation") {
-      console.log("asd");
       openModal();
     }
   };
@@ -36,6 +35,7 @@ const NavList = () => {
             className={styles.navItem}
           >
             <Image src={background} className={styles.navImg} alt={nav.title} />
+
             <NavItem href={nav.href}>{nav.title}</NavItem>
           </li>
         ))}
