@@ -14,6 +14,7 @@ import Link from "next/link";
 import Image from "next/image";
 import RankingTable from "@/app/(root)/test/(lobi)/rankingTable";
 import { Icon } from "@/types/headerLobi/NavLink";
+import LobiSettings from "@/app/(root)/test/(lobi)/settings";
 const icons: Icon[] = [
   { icon: plusIcon, alt: "PlusIcon", className: styles.navIcon },
   { icon: giftIcon, alt: "GiftIcon", className: styles.navIcon },
@@ -28,6 +29,7 @@ const icons: Icon[] = [
 ];
 const Header: React.FC = () => {
   const [isRankingTable, setIsRankingTable] = useState<boolean>(false);
+  const [isSettingsTable, setIsSettingsTable] = useState<boolean>(false);
 
   const openModal = () => {
     setIsRankingTable(true);
@@ -36,10 +38,22 @@ const Header: React.FC = () => {
   const closeModal = () => {
     setIsRankingTable(false);
   };
+  const openModalSettings = () => {
+    setIsSettingsTable(true);
+  };
+
+  const closeModalSettings = () => {
+    setIsSettingsTable(false);
+  };
 
   const handleNavItemClick = (rankTable: string) => {
     if (rankTable === "RankIcon") {
       openModal();
+      closeModalSettings();
+    }
+    if (rankTable === "SettingsIcon") {
+      openModalSettings();
+      closeModal();
     }
   };
   const handleButtonClick = (): void => {
@@ -82,6 +96,7 @@ const Header: React.FC = () => {
         </div>
       </header>
       {isRankingTable && <RankingTable closeModal={closeModal} />}
+      {isSettingsTable && <LobiSettings closeModal={closeModalSettings} />}
     </>
   );
 };
